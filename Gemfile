@@ -15,11 +15,12 @@ end
 group :development, :test do
   gem 'capybara'
   gem 'factory_bot_rails'
-  gem 'launchy', require: false
+  gem 'launchy'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
   gem 'valid_attribute'
+  gem 'shoulda-matchers', require: false
 end
 
 group :production do
