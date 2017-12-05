@@ -1,7 +1,7 @@
 source 'https://rubygems.org/'
 
-gem 'pg', '~> 0.18'
 gem 'jquery-rails'
+gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.1.4'
 gem 'sass-rails', '~> 5.0'
