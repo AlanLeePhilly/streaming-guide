@@ -1,14 +1,14 @@
 source 'https://rubygems.org/'
 
-ruby '2.3.3'
 
-gem 'rails'
+ruby '2.3.3'
+gem 'jquery-rails'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
+gem 'rails', '~> 5.1.4'
 gem 'sass-rails', '~> 5.0'
 gem 'devise'
 gem 'uglifier', '>= 1.3.0'
-gem 'jquery-rails'
 group :development do
   gem 'listen'
   gem 'spring'
@@ -17,15 +17,16 @@ end
 
 group :development, :test do
   gem 'capybara'
+  gem 'coveralls', require: false
   gem 'factory_bot_rails'
   gem 'launchy'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
-  gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
-
   gem 'quiet_assets'
+  gem 'valid_attribute'
+
 end
 
 group :production do
