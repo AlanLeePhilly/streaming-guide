@@ -16,5 +16,5 @@ RSpec.describe Program, type: :model do
   it { should belong_to(:user) }
   it { should have_many(:reviews) }
   it { should have_many(:programgenres) }
-  it { should have_many(:genres), through: :programgenres}
+  it { should have_many(:genres), through: :programgenres }
 end

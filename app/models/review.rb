@@ -10,5 +10,4 @@ class Review < ApplicationRecord
   validates :body, presence: true
   validates :rating, inclusion: { in: 0..10 }
   validates :vote_count, presence: true, numericality: true
-
 end
