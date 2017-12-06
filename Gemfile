@@ -3,11 +3,8 @@ source 'https://rubygems.org/'
 gem 'jquery-rails'
 gem 'pg', '~> 0.18'
 gem 'devise'
-<<<<<<< HEAD
 gem 'puma', '~> 3.0'
-=======
 gem 'rails', '~> 5.1.4'
->>>>>>> 16c14248367eb32a8b7f1fc9e8df0c8db5f07732
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 group :development do
