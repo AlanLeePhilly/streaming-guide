@@ -1,4 +1,4 @@
-#I am a model
+# I am a model
 class Vote < ApplicationRecord
   belongs_to :user
   belongs_to :review

@@ -1,4 +1,4 @@
-#I am a model
+# I am a model
 class Program < ApplicationRecord
   has_many :reviews
   has_many :programgenres
@@ -17,5 +17,4 @@ class Program < ApplicationRecord
   validates :imdb_id, presence: true
   validates :total_seasons, presence: true
   validates :user_id, presence: true
-
 end

@@ -1,4 +1,4 @@
-#I am a model
+# I am a model
 class Programgenre < ApplicationRecord
   belongs_to :genre
   belongs_to :program
