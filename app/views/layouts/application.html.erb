@@ -9,6 +9,11 @@
   </head>
 
   <body>
+     <nav>
+      <!-- <% link_to "Sign Out", destroy_user_session_path %> -->
+     </nav>
+     <p class="Notice"> <%=notice %> </p>
+     <p class="Alert"> <%=alert %> </p>
     <%= yield %>
   </body>
 </html>
