@@ -223,8 +223,8 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  devise
   coveralls
+  devise
   factory_bot_rails
   jquery-rails
   launchy
