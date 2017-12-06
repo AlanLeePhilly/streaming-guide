@@ -7,6 +7,9 @@ RSpec.describe User, type: :model do
   it { should have_valid(:last_name).when('Smith', 'Swanson') }
   it { should_not have_valid(:last_name).when(nil, '') }
 
+  it { should have_valid(:user_name).when('JSmith', 'JSwanson') }
+  it { should_not have_valid(:user_name).when(nil, '') }
+
   it { should have_valid(:email).when('user@example.com', 'another@gmail.com') }
   it { should_not have_valid(:email).when(nil, '', 'urser', 'usersr@com', 'userba.com') }
 
