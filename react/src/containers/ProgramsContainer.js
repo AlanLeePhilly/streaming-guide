@@ -26,7 +26,8 @@ class ProgramsContainer extends Component {
           key={program.id}
           id={program.id}
           title={program.title}
-  
+          poster_url={program.poster_url}
+
         />
       )
     })
