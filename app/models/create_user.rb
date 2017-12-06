@@ -1,3 +1,4 @@
+#This is a model
 class CreateUser < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

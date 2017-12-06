@@ -1,5 +1,4 @@
 FactoryBot.define do
-   factory :install do
-
-   end
+  factory :install do
+  end
 end
