@@ -1,6 +1,11 @@
 # README
 [![Build Status](https://codeship.com/projects/c37cb830-bb59-0135-37fd-46dcf572bfca/status?branch=master)
+
 [![Code Climate](https://codeclimate.com/github/AlanLeePhilly/streaming-guide/badges/gpa.svg)](https://codeclimate.com/github/AlanLeePhilly/streaming-guide)
+
+[![Code Climate](https://codeclimate.com/github/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/badges/gpa.svg)](https://codeclimate.com/github/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>)
+
+
 [![Coverage Status](https://coveralls.io/repos/github/AlanLeePhilly/streaming-guide/badge.svg?branch=master)](https://coveralls.io/github/AlanLeePhilly/streaming-guide?branch=master)
 
 
