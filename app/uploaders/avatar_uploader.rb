@@ -1,5 +1,5 @@
+# I am a class
 class AvatarUploader < CarrierWave::Uploader::Base
-
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
@@ -15,14 +15,11 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
-  def default_url(*args)
-    ActionController::Base.helpers.asset_path("default_pic.jpg")
+  def default_url(*)
+    ActionController::Base.helpers.asset_path('default_pic.jpg')
   end
-  #   # For Rails 3.1+ asset pipeline compatibility:
-  #   ActionController::Base.helpers.asset_path("images/" + [version_name, "default_pic.png.jpg"].compact.join('_'))
-  #
-  #   # "/images/fallback/" + [version_name, "default.png"].compact.join('_')
-  # end
+
+
 
   # def default_url(*args)
   #   "/images/default_pic.png.jpg"
@@ -50,5 +47,4 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-
 end

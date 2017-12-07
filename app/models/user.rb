@@ -12,10 +12,8 @@ class User < ActiveRecord::Base
   validates :last_name, presence: true
   validates :user_name, presence: true
 
-  # validates :avatar, presence: true
-  # validates :avatar, integrity: true
-  # validates :avatar, processing: true
-
+  validates :avatar, integrity: true
+  validates :avatar, processing: true
 
    # Include default devise modules. Others available are:
    # :confirmable, :lockable, :timeoutable and :omniauthable
