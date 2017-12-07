@@ -23,6 +23,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'shoulda-matchers', require: false
   gem 'valid_attribute'
+  gem 'rails-controller-testing'
 end
 
 group :production do
