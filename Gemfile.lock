@@ -258,6 +258,7 @@ DEPENDENCIES
   pg (~> 0.18)
   pry-rails
   puma (~> 3.0)
+  rack-test
   rails (~> 5.1.4)
   rails-controller-testing
   rails_12factor

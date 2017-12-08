@@ -5,11 +5,11 @@ class Api::V1::ProgramsController < ApplicationController
   end
 
   def show
-    program = Program.find(params[:id]
-    reviews = program.reviews
-    render json: {     
-      program: program
-      reviews: reviews
+    @program = Program.find(params[:id])
+    @reviews = @program.reviews
+    render json: {
+      program: @program,
+      reviews: @reviews
     }
   end
 end

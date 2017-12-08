@@ -24,6 +24,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
   gem 'shoulda-matchers', require: false
+  gem 'rack-test'
   gem 'valid_attribute'
   gem 'rails-controller-testing'
 end
