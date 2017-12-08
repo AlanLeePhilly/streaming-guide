@@ -1,7 +1,7 @@
 # comment for codeclimate
 class Api::V1::ProgramsController < ApplicationController
   def index
-    render json: { programs: Programs.all }
+    render json: { programs: Program.all }
   end
 
   def show

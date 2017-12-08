@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/Compass/compass-rails.git
+  revision: 17414438f601d695225ba9c55f259d2ec557942c
+  specs:
+    compass-rails (3.0.2)
+      compass (~> 1.0.0)
+      sass-rails (< 5.1)
+      sprockets (< 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -50,7 +59,20 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    chunky_png (1.3.8)
     coderay (1.1.2)
+    compass (1.0.3)
+      chunky_png (~> 1.2)
+      compass-core (~> 1.0.2)
+      compass-import-once (~> 1.0.5)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+      sass (>= 3.3.13, < 3.5)
+    compass-core (1.0.3)
+      multi_json (~> 1.0)
+      sass (>= 3.3.0, < 3.5)
+    compass-import-once (1.0.5)
+      sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.5)
     coveralls (0.8.21)
       json (>= 1.8, < 3)
@@ -98,6 +120,7 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.10.3)
+    multi_json (1.12.2)
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
@@ -169,11 +192,7 @@ GEM
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.0)
-    sass (3.5.3)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
+    sass (3.4.25)
     sass-rails (5.0.7)
       railties (>= 4.0.0, < 6)
       sass (~> 3.1)
@@ -208,7 +227,7 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.8)
-    tins (1.16.1)
+    tins (1.16.3)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
     uglifier (4.0.1)
@@ -221,12 +240,15 @@ GEM
     websocket-extensions (0.1.3)
     xpath (2.1.0)
       nokogiri (~> 1.3)
+    zurb-foundation (4.3.2)
+      sass (>= 3.2.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   capybara
+  compass-rails!
   coveralls
   devise
   factory_bot_rails
@@ -248,6 +270,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   valid_attribute
+  zurb-foundation
 
 BUNDLED WITH
    1.16.0
