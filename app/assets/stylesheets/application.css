@@ -12,4 +12,17 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+ *= require foundation
  */
+
+
+/* HOSTING CSS IN HERE BECAUSE REQUIRE NOT WORKING RIGHT NOW*/
+
+ .show-page-poster {
+   width: 15em;
+ }
+
+ .program-tile {
+   width: 5em;
+ }

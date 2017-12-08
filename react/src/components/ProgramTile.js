@@ -3,9 +3,9 @@ import { Link } from 'react-router';
 
 const ProgramTile = props => {
   return(
-    <div>
-      <Link to={`/shows/${props.id}`}>
-        <img src={props.poster_url}></img>
+    <div className="large-6 medium-2 small-4 cell">
+      <Link to={`/programs/${props.id}`}>
+        <img className="program-tile" src={props.poster_url}></img>
         <h1>{props.title}</h1>
       </Link>
     </div>
