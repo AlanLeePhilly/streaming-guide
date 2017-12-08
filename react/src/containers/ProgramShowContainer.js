@@ -25,26 +25,10 @@ class ProgramShowContainer extends Component {
     .then(response => response.json())
     .then(body => {
 
-      this.setState({ program: body['program'] })
-    })
-    .catch(error => console.error(`Error in fetch: ${error.message}`));
-
-
-    fetch(`/api/v1/programs/${programId}/reviews`)
-    .then(response => {
-      if (response.ok) {
-        return response;
-      } else {
-        let errorMessage = `${response.status} (${response.statusText})`,
-        error = new Error(errorMessage);
-        throw(error);
-      }
-    })
-    .then(response => response.json())
-    .then(body => {
       this.setState({
-       reviews: body['review']
-      })
+        program: body['program'],
+        reviews: body['reviews']
+       })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
@@ -63,8 +47,6 @@ class ProgramShowContainer extends Component {
         />
       )
     })
-
-
 
     return(
       <div>
