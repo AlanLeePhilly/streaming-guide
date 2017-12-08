@@ -16,7 +16,7 @@ feature 'sign up',%{
        fill_in 'Password Confirmation', with: 'password'
        click_button 'Sign Up'
 
-     # expect(page).to have_content("You have signed up successfully!")
+     expect(page).to have_content('Welcome! You have signed up successfully.')
      # expect(page).to have_content("Sign Out")
    end
 

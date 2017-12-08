@@ -8,12 +8,19 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+<h2>Change password</h2>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "New Password" %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
     <% if @minimum_password_length %>
       <br />
@@ -22,18 +29,21 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, "New Password Confirmation" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+<h2>Add Profile Info</h2>
+
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+    <%= f.label :avatar, "Profile Photo" %><br />
+    <%= f.file_field :avatar %>
   </div>
 
-  <div class="actions">
+  <div class="actions"> <br>
     <%= f.submit "Update" %>
   </div>
+
 <% end %>
 
 <h3>Cancel my account</h3>
