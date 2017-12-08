@@ -12,14 +12,14 @@ RSpec.describe Api::V1::ProgramsController, type: :controller do
   end
   describe 'GET show' do
     it 'should render json obj of one program and relevant reviews' do
-      p1= FactoryBot.create(:program)
-      p2= FactoryBot.create(:program)
+      p1 = FactoryBot.create(:program)
+      p2 = FactoryBot.create(:program)
       FactoryBot.create_list(:review, 3, program: p1)
-      get :show, params: {id: p1.id}
+      get :show, params: { id: p1.id }
       json = JSON.parse(response.body)
       # binding.pry
-      expect(json["program"]["title"]).to eq("Orange Is the New Black")
-      expect(json["reviews"].length).to eq(3)
+      expect(json['program']['title']).to eq('Orange Is the New Black')
+      expect(json['reviews'].length).to eq(3)
     end
   end
 end
