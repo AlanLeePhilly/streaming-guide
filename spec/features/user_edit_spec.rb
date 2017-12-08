@@ -1,22 +1,42 @@
 # These are tests for future features for editing your user page
 require 'rails_helper'
 
-feature 'edit profile',%{
-   As a user
-   I want to edit my profile
-   So that I can stand out on this fancy site
-} do
+# feature 'edit profile', %(
+#    As a user
+#    I want to edit my profile
+#    So that I can stand out on this fancy site
+# ) do
+feature 'edit profile' do
+  let!(:user) {FactoryBot.create(:user)}
 
 
   scenario 'vistor tries to navigate to an edit page' do
-    visit "/users/edit"
+    visit '/users/edit'
 
-      expect(page).to have_content('Email')
-      expect(page).to have_content('Home')
-      expect(page).to have_content('Sign In')
-      expect(page).to have_content('Sign Up')
-      expect(page).to have_content('Password')
+    expect(page).to have_content('Email')
+    expect(page).to have_content('Home')
+    expect(page).to have_content('Sign In')
+    expect(page).to have_content('Sign Up')
+    expect(page).to have_content('Password')
   end
+
+  scenario 'user edits their account' do
+    login(user)
+    visit edit_user_registration_path
+
+    expect(page).to have_content 'Edit'
+    # expect(find_field('First Name').value).to eq 'John'
+    # expect(find_field('Last Name').value).to eq 'Smith'
+    expect(find_field('Email').value).to eq 'cbog@gmail.com'
+    expect(find_field('Username').value).to eq 'jsmith'
+  end
+end
+
+
+
+
+
+
   #
   # scenario 'user fills out form with valid values and submits' do
   #   visit edit_user_registration_path
@@ -60,4 +80,3 @@ feature 'edit profile',%{
   # click_on 'Update'
   #
   # expect(page).to have_content 'Current password can\'t be blank'
-end

@@ -418,6 +418,7 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   coveralls
   devise
+  factory_bot
   factory_bot_rails
   fog
   jquery-rails
