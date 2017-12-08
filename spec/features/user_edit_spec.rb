@@ -1,3 +1,4 @@
+#These are tests for future features for editing your user page
 # require 'rails_helper'
 #
 # feature 'edit profile',%{

@@ -21,14 +21,14 @@
   <h4>So much empty..Start Reviewing!</h4>
 <% else %>
 <% @reviews.each do |review| %>
-<ul>
-  <li>
-    Show: <%=review.program.title%> <br>
-    Review: <%=review.headline%> <br>
-    Why?: <%=review.body %> <br>
+  <ul>
+    <li>
+      Show: <%=review.program.title%> <br>
+      Review: <%=review.headline%> <br>
+      Why?: <%=review.body %> <br>
       Rating: <%=review.rating %> <br>
       Vote Count: <%=review.vote_count%>
-  </li>
-</ul>
-<%end%>
+    </li>
+  </ul>
+  <%end%>
 <%end%>
