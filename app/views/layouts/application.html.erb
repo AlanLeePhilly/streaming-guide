@@ -2,17 +2,10 @@
 <html>
   <head>
     <title>StreamGuide</title>
-    <!-- <meta charset="utf-8" /> -->
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <!-- <%= javascript_include_tag 'vendor/custom.modernizr' %> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-    <!-- <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script> -->
   </head>
 
   <body>
@@ -27,12 +20,10 @@
         <%= link_to "Sign In", new_user_session_path %>
         <%= link_to "Sign Up", new_user_registration_path %>
       <% end %>
-    </div>
 
-    <p class="Notice"> <%=notice %> </p>
-    <p class="Alert"> <%=alert %> </p>
-    <div class="large-10 large-centered columns">
-      <%= yield %>
     </div>
+     <p class="Notice"> <%=notice %> </p>
+     <p class="Alert"> <%=alert %> </p>
+    <%= yield %>
   </body>
 </html>
