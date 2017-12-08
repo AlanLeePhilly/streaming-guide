@@ -1,7 +1,10 @@
 
 <h1><%=@user.user_name%></h1>
+<% if current_user == @user %>
+<%= link_to "Edit your profile", edit_user_registration_path %> <br>
+<%= button_to "Cancel my account", destroy_user_session_path, data: { confirm: "Are you sure?" }, method: :delete %></p>
+<% end%>
 
-<!-- <%= link_to "Edit Profile", edit_user_registration_path %> -->
 <% if @user.avatar %>
   <img src="<%= @user.avatar %>"/>
 <% else %>

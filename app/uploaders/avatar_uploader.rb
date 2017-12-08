@@ -19,7 +19,9 @@ class AvatarUploader < CarrierWave::Uploader::Base
     ActionController::Base.helpers.asset_path('default_pic.jpg')
   end
 
-
+  # version :thumb do
+  #   process :resize_to_fill => [50, 50]
+  # end
 
   # def default_url(*args)
   #   "/images/default_pic.png.jpg"
