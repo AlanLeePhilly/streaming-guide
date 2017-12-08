@@ -8,7 +8,9 @@ gem 'fog'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.1.4'
 gem 'sass-rails', '~> 5.0'
+gem 'compass-rails', github: 'Compass/compass-rails'
 gem 'uglifier', '>= 1.3.0'
+gem 'zurb-foundation'
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
@@ -24,6 +26,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
   gem 'shoulda-matchers', require: false
+  gem 'rack-test'
   gem 'valid_attribute'
   gem 'rails-controller-testing'
 end

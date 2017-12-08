@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20171207182349) do
     t.integer "vote_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
   end
 
   create_table "users", force: :cascade do |t|
