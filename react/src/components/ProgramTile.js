@@ -6,7 +6,7 @@ const ProgramTile = props => {
     <div className="large-6 medium-2 small-4 cell">
       <Link to={`/programs/${props.id}`}>
         <img className="program-tile" src={props.poster_url}></img>
-        <h1>{props.title}</h1>
+        <h5>{props.title}</h5>
       </Link>
     </div>
   )
