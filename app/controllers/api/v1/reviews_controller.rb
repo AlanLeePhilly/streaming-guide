@@ -21,7 +21,7 @@ class Api::V1::ReviewsController < ApplicationController
     @review.user = @user
 
     if @review.save
-      render json: { review: Review.where(params[:program_id]) }
+      render json: { review: @reviews }
     else
       render json: { error: @review.errors.full_messages }, status: :unprocessable_entity
     end

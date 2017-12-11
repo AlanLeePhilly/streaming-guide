@@ -1,73 +1,45 @@
 import React, { Component } from 'react';
-import ReviewTextInputField from '../components/ReviewTextInputField'
+import ReviewForm from '../components/ReviewForm';
 
-class FormContainer extends Component {
+class ReviewFormContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      headline: '',
-      body: '',
-      rating: ''
+  }
+
+  addNewReview(newReview){
+    let program_id = newReview.program_id
+  fetch(`/api/v1/programs/${program_id}/reviews`, {
+    credentials: 'same-origin',
+    method: "POST",
+    body: JSON.stringify(newReview),
+    headers: {'Content-Type': 'application/json'}
+  })
+  .then(response => {
+    if (response.ok) {
+      return response;
+    } else {
+      let errorMessage = `${response.status} (${response.statusText})`,
+      error = new Error(errorMessage);
+      throw(error);
     }
-    this.handleFormSubmit = this.handleFormSubmit.bind(this)
-    this.handleClearForm = this.handleClearForm.bind(this)
-    this.onChange=this.onChange.bind(this)
-  }
-
-  handleFormSubmit(event) {
-    let newReview = {
-      headline: this.state.headline ,
-      body: this.state.body,
-      rating: this.state.rating,
-      program_id: this.props.program_id.id
-    }
-    this.props.addNewReview(newReview);
-    handleClearForm(event);
-  }
-
-  handleClearForm(event) {
-    this.setState({
-      headline: '',
-      body: '',
-      rating: ''
-    })
-  }
-
-  onChange(event) {
-    this.setState( { [event.target.id]: event.target.value  } )
+  })
+  .then(response => response.json())
+  .then(body => {
+  })
+  .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   render() {
     return(
-      <form className='callout' onSubmit={this.handleFormSubmit}>
-        <ReviewTextInputField
-          id="headline"
-          label="Headline"
-          name="headline"
-          value={this.state.headline}
-          onChange={this.onChange}
-        />
-        <ReviewTextInputField
-          id="body"
-          label="Review"
-          name="body"
-          value={this.state.body}
-          onChange={this.onChange}
-        />
-        <ReviewTextInputField
-          id="rating"
-          label="Rating (0-10)"
-          name="rating"
-          value={this.state.rating}
-          onChange={this.onChange}
-        />
-
-        <div className="button-group">
-          <input className="button" type="submit" value="Submit" />
-        </div>
-      </form>
+      <div>
+        <h2>Add a New Review!</h2>
+      <ReviewForm
+        program_id = {this.props.program_id}
+        addNewReview = {this.addNewReview}
+      />
+    </div>
     )
   }
 }
 
-export default FormContainer;
+export default ReviewFormContainer;
