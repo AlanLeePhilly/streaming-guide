@@ -21,7 +21,7 @@ feature 'edit profile' do
   end
 
   scenario 'user edits their account' do
-    login(user)
+    login(user, scope: :user)
     visit edit_user_registration_path
 
     expect(page).to have_content 'Edit'
