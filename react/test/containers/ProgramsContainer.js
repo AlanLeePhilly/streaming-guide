@@ -16,6 +16,6 @@ describe('ProgramsContainer', () => {
   });
 
   it('should render an h1 tag with the title property value', () => {
-    expect(wrapper.find('h1').text()).toBe('Shows Are Great');
+    expect(wrapper.find('h1').text()).toBe('Programs Index Page');
   });
 });

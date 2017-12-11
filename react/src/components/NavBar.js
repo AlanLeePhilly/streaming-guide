@@ -4,7 +4,7 @@ import BackButton from './BackButton'
 
 const NavBar = props => {
   return(
-    <div>
+    <div className="row">
       <BackButton />
       <Link to='/'> HOME </Link>
       <h1 className="page-title">#Big_Night_In</h1>

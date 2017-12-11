@@ -1,3 +1,46 @@
+
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+User.create(
+ first_name: "chris",
+ last_name: "fo",
+ email:"chris123@gmail.com",
+ user_name: "chrisf",
+ password: "passwordchris"
+)
+
+ User.create(
+ first_name: "christina",
+ last_name: "beauregard",
+ email:"christina123@gmail.com",
+ user_name: "christinab",
+ password: "passwordchristina"
+)
+
+ User.create(
+ first_name: "Alan",
+ last_name: "lee",
+ email:"alan123@gmail.com",
+ user_name: "alanl",
+ password: "passwordalan"
+)
+
+ User.create(
+ first_name: "James",
+ last_name: "Lee",
+ email:"james123@gmail.com",
+ user_name: "jamesl",
+ password: "passwordjames"
+)
+
 Program.create(
   title:"Orange Is the New Black",
   year:"2013-",
@@ -145,6 +188,52 @@ Program.create(
 Review.create(
     program_id: 1,
     user_id: 1,
+    username: "alanjlee",
+    headline: "Really Stupid",
+    body: "I did not like this show as much as I thought I would.",
+    rating: 0,
+)
+
+Review.create(
+    program_id: 1,
+    user_id: 2,
+    username: "secondjlee",
+    headline: "Just OK",
+    body: "Didn't hate it",
+    rating: 3,
+)
+
+Review.create(
+    program_id: 1,
+    user_id: 3,
+    username: "thirdlee",
+    headline: "It was dope",
+    body: "Super duper fun show",
+    rating: 5,
+)
+
+Review.create(
+    program_id: 2,
+    user_id: 1,
+    username: "alanjlee",
+    headline: "Really Dumb",
+    body: "Practically unwatchable garbage pail nonsense",
+    rating: 0,
+)
+
+Review.create(
+    program_id: 2,
+    user_id: 2,
+    username: "secondjlee",
+    headline: "bomb diggity",
+    body: "So much better than the other one.",
+    rating: 5,
+)
+
+Review.create(
+    program_id: 3,
+    user_id: 1,
+    username: "alanjlee",
     headline: "Really Stupid",
     body: "I did not like this show as much as I thought I would.",
     rating: 0,
