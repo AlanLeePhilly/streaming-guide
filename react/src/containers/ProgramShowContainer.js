@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReviewFormContainer from './ReviewFormContainer.js'
 import ReviewTile from '../components/ReviewTile'
 
 class ProgramShowContainer extends Component {
@@ -8,6 +9,7 @@ class ProgramShowContainer extends Component {
       reviews: [],
       program: {}
     }
+    this.addNewReview = this.addNewReview.bind(this)
   }
 
   componentDidMount(){
@@ -31,6 +33,30 @@ class ProgramShowContainer extends Component {
        })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
+  addNewReview(newReview){
+    let programId = this.props.params.id
+  fetch(`/api/v1/programs/${programId}/reviews`, {
+    credentials: 'same-origin',
+    method: "POST",
+    body: JSON.stringify(newReview),
+    headers: {'Content-Type': 'application/json'}
+  })
+  .then(response => {
+    if (response.ok) {
+      return response;
+    } else {
+      let errorMessage = `${response.status} (${response.statusText})`,
+      error = new Error(errorMessage);
+      throw(error);
+    }
+  })
+  .then(response => response.json())
+  .then(body => {
+    this.setState({ reviews: this.state.reviews.concat(body)})
+  })
+  .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   render(){
@@ -70,6 +96,12 @@ class ProgramShowContainer extends Component {
               Total Seasons: {program.total_seasons}
             </p>
           </div>
+        </div>
+        <div>
+          <ReviewFormContainer
+            addNewReview={this.addNewReview}
+            program_id={this.state.program}
+          />
         </div>
         {reviews}
       </div>

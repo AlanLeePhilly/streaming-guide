@@ -5,11 +5,13 @@ class Api::V1::ProgramsController < ApplicationController
   end
 
   def show
+    @user = current_user
     @program = Program.find(params[:id])
     @reviews = @program.reviews
     render json: {
       program: @program,
-      reviews: @reviews
+      reviews: @reviews,
+      user: @user
     }
   end
 end
