@@ -12,11 +12,19 @@ class ProgramsContainer extends Component {
   componentDidMount(){
     fetch('/api/v1/programs')
     .then(response => {
-      let parsed = response.json()
-      return parsed
-    }).then(programs => {
-      this.setState({ programs: programs})
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+        error = new Error(errorMessage);
+        throw(error);
+      }
     })
+    .then(response => response.json())
+    .then(body => {
+      this.setState({ programs: body['programs']})
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   render(){
@@ -34,8 +42,10 @@ class ProgramsContainer extends Component {
 
     return(
       <div>
-        <h1>Shows Are Great</h1>
-        {programs}
+        <h1>Programs Index Page</h1>
+        <div className="grid-x grid-margin-x">
+          {programs}
+        </div>
       </div>
     )
   }
