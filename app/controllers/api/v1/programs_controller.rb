@@ -1,6 +1,6 @@
 # comment for codeclimate
 class Api::V1::ProgramsController < ApplicationController
-  protect_from_forgery with: :null_session, if: Proc.new { |c| c.request.format.json? }
+  protect_from_forgery with: :null_session, if: proc { |c| c.request.format.json? }
 
   def index
     render json: { programs: Program.all }
@@ -33,8 +33,13 @@ class Api::V1::ProgramsController < ApplicationController
     end
   end
 
-private
+  private
+
   def program_params
-    params.require(:program).permit(:title, :year, :rated, :run_time, :genre, :actor, :plot, :award, :poster_url, :imdb_rating, :imdb_id, :total_seasons, :user_id)
+    params.require(:program).permit(
+      :title, :year, :rated, :run_time,
+      :genre, :actor, :plot, :award,
+      :poster_url, :imdb_rating,
+      :imdb_id, :total_seasons, :user_id)
   end
 end
