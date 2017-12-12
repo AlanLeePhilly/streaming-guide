@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReviewFormContainer from './ReviewFormContainer.js'
 import ReviewTile from '../components/ReviewTile'
 
 class ProgramShowContainer extends Component {
@@ -33,6 +34,7 @@ class ProgramShowContainer extends Component {
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
+
 
   render(){
     let program = this.state.program
@@ -72,6 +74,12 @@ class ProgramShowContainer extends Component {
               Total Seasons: {program.total_seasons}
             </p>
           </div>
+        </div>
+        <div>
+          <ReviewFormContainer
+            program_id={this.props.params.id}
+            reviews={this.state.reviews}
+          />
         </div>
         {reviews}
       </div>

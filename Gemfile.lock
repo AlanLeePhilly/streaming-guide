@@ -439,6 +439,7 @@ DEPENDENCIES
   compass-rails!
   coveralls
   devise
+  factory_bot
   factory_bot_rails
   fog
   jquery-rails

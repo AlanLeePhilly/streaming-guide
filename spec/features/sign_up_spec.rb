@@ -1,3 +1,4 @@
+# Sign Up tests
 require 'rails_helper'
 
 feature 'sign up',%{
@@ -17,7 +18,6 @@ feature 'sign up',%{
        click_button 'Sign Up'
 
      expect(page).to have_content('Welcome! You have signed up successfully.')
-     # expect(page).to have_content("Sign Out")
    end
 
    scenario 'required information is not supplied' do

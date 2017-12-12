@@ -4,6 +4,7 @@ import React from 'react';
 
 
 describe('ReviewTile', () => {
+
   let data,
       wrapper;
 
@@ -24,9 +25,14 @@ describe('ReviewTile', () => {
     );
   });
 
+  it('should render a div tag', () => {
+     expect(wrapper.find('div').length).toEqual(1);
+  });
+
   it('should render a p tag', () => {
     expect(wrapper.find('p').length).toEqual(1);
   });
+
 
 
   it('should render an h1 tag with the title property value', () => {
@@ -34,5 +40,6 @@ describe('ReviewTile', () => {
     expect(wrapper.text()).toContain('this body');
     expect(wrapper.text()).toContain('Rating: 8/10');
     expect(wrapper.text()).toContain('this username');
+
   });
 });

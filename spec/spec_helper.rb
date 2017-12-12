@@ -18,7 +18,13 @@ require 'capybara/rspec'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'coveralls'
+require 'simplecov'
 Coveralls.wear!('rails')
+
+SimpleCov.formatter = Coveralls::SimpleCov::Formatter
+SimpleCov.start do
+  add_filter 'app/channels'
+end
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

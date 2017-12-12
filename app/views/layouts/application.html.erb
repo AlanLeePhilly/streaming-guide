@@ -14,13 +14,13 @@
 
       <% if current_user %>
         <%= link_to current_user.user_name, user_path(current_user.id)  %>
-
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
       <% else %>
         <%= link_to "Sign In", new_user_session_path %>
         <%= link_to "Sign Up", new_user_registration_path %>
       <% end %>
     </div>
+
     
     <% if alert %>
       <% alert.each do |mess| %>
@@ -30,6 +30,12 @@
 
      <p class="Notice"> <%=notice %> </p>
      <p class="Alert"> <%=alert %> </p>
+
+    <% flash.each do |key, value| %>
+      <p> <%= value %> </p>
+    <%end%>
+
+
     <%= yield %>
   </body>
 </html>
