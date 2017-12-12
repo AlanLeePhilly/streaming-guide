@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import ProgramForm from '../components/ProgramForm';
+import {browserHistory} from 'react-router';
 
-const ProgramFormContainer = () => {
+class ProgramFormContainer extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      error: ''
+    };
+    this.addNewProgram = this.addNewProgram.bind(this)
+  }
 
-
-  let addNewProgram = (newProgram) => {
-    debugger
+  addNewProgram(newProgram){
     fetch('/api/v1/programs', {
       method: 'POST',
       headers: {
@@ -18,6 +24,7 @@ const ProgramFormContainer = () => {
       if (response.ok) {
         return response;
       } else {
+        debugger
         let errorMessage = `${response.status} (${response.statusText})`,
         error = new Error(errorMessage);
         throw(error);
@@ -25,15 +32,28 @@ const ProgramFormContainer = () => {
     })
     .then(response => response.json())
     .then(body => {
-      return body
+      debugger
+      let id = body.program.length
+      browserHistory.push(`/programs/${id}`)
     })
-    .catch(error => console.error(`Error in fetch: ${error.message}`));
+    .catch(error => {
+      debugger
+      this.setState({
+        error: error.message
+      })
+      console.error(`Error in fetch: ${error.message}`)
+    });
   }
-
+  render(){
     return(
-    <ProgramForm
-      addNewProgram= {addNewProgram}
-    />
+      <div>
+        <ProgramForm
+          addNewProgram= {this.addNewProgram}
+        />
+
+        <p>{this.state.error}</p>
+      </div>
     )
+  }
 }
 export default ProgramFormContainer;

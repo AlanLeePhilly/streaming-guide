@@ -6,7 +6,8 @@ class ProgramShowContainer extends Component {
     super(props);
     this.state = {
       reviews: [],
-      program: {}
+      program: {},
+      usernames: []
     }
   }
 
@@ -24,10 +25,10 @@ class ProgramShowContainer extends Component {
     })
     .then(response => response.json())
     .then(body => {
-
       this.setState({
         program: body['program'],
-        reviews: body['reviews']
+        reviews: body['reviews'],
+        usernames: body['usernames']
        })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
@@ -35,7 +36,7 @@ class ProgramShowContainer extends Component {
 
   render(){
     let program = this.state.program
-    let reviews = this.state.reviews.map(review => {
+    let reviews = this.state.reviews.map((review, i) => {
       let date = new Date(review.created_at);
       let shortdate = (date.getMonth()+1)+'-' + date.getDate() + '-'+date.getFullYear();
       return(
@@ -43,6 +44,7 @@ class ProgramShowContainer extends Component {
           key={review.id}
           id={review.id}
           data={review}
+          username={this.state.usernames[i]}
           shortdate={shortdate}
         />
       )

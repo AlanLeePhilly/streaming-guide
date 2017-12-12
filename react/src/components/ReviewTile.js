@@ -7,7 +7,7 @@ const ReviewTile = props => {
       <p>
         <strong>{props.data.headline}</strong><br />
         {props.shortdate}<br />
-        {props.data.username}<br /> <br />
+        {props.username}<br /> <br />
         {props.data.body}<br />
         Rating: {props.data.rating}/10<br /> <br />
         Vote Score: {props.data.vote_count}

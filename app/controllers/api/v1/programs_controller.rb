@@ -9,16 +9,20 @@ class Api::V1::ProgramsController < ApplicationController
   def show
     @program = Program.find(params[:id])
     @reviews = @program.reviews
+    @usernames = @reviews.map{ |x| x.user.user_name }
     render json: {
       program: @program,
-      reviews: @reviews
+      reviews: @reviews,
+      usernames: @usernames
     }
   end
 
   def create
     @program = Program.new(program_params)
-    @user = current_user
-    @program.user = @user
+    if current_user
+      @user = current_user
+      @program.user = @user
+    end
 
     if @program.save
       render json: { program: Program.where(params[:program_id]) }
