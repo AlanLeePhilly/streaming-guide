@@ -2,11 +2,6 @@
 class Api::V1::ReviewsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-
-  def index
-    render json: { review: Review.all }
-  end
-
   def show
     render json: { review: Review.where(params[:program_id]) }
   end
