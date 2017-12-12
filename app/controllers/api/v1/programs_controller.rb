@@ -12,7 +12,7 @@ class Api::V1::ProgramsController < ApplicationController
     render json: {
       program: @program,
       reviews: @reviews,
-      user: @user
+      user: @user,
       users: @users
     }
   end
