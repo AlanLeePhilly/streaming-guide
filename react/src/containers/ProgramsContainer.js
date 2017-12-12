@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProgramTile from '../components/ProgramTile';
+import { Link } from 'react-router';
 
 class ProgramsContainer extends Component {
   constructor(props){
@@ -43,6 +44,7 @@ class ProgramsContainer extends Component {
     return(
       <div>
         <h1>Programs Index Page</h1>
+        <Link to='/programs/new'> Add Program </Link>
         <div className="grid-x grid-margin-x">
           {programs}
         </div>

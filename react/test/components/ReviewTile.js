@@ -4,15 +4,23 @@ import React from 'react';
 
 
 describe('ReviewTile', () => {
-  let id,
-      data,
+
+  let data,
       wrapper;
 
   beforeEach(() => {
+    data = {
+      headline: 'this headline',
+      body: 'this body',
+      rating: 8,
+      vote_count: 0
+    }
     wrapper = mount(
       <ReviewTile
         id= "1"
-        data= "I am a Headline"
+        data={data}
+        username='this username'
+        shortdate='this shortdate'
       />
     );
   });
@@ -25,11 +33,13 @@ describe('ReviewTile', () => {
     expect(wrapper.find('p').length).toEqual(1);
   });
 
-  it('should render an p tag with the rating/vote score', () => {
-    expect(wrapper.find('p').text()).toBe(' Rating: /10 Vote Score: ');
-  });
 
-  it('should render an strong tag', () => {
-    expect(wrapper.find('strong').text()).toBe('');
+
+  it('should render an h1 tag with the title property value', () => {
+    expect(wrapper.text()).toContain('this headline');
+    expect(wrapper.text()).toContain('this body');
+    expect(wrapper.text()).toContain('Rating: 8/10');
+    expect(wrapper.text()).toContain('this username');
+
   });
 });
