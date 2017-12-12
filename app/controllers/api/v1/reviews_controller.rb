@@ -21,8 +21,11 @@ class Api::V1::ReviewsController < ApplicationController
     @review.user = @user
 
     if @review.save
+      flash[:notice] = 'Thanks for the Submission!'
       render json: { review: @reviews }
     else
+      flash[:notice] = @review.errors.full_messages.join(', ')
+
       render json: { error: @review.errors.full_messages }, status: :unprocessable_entity
     end
   end

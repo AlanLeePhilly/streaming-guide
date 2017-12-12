@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReviewTextInputField from '../components/ReviewTextInputField';
+import ReviewSelectField from '../components/ReviewSelectField'
 
 class ReviewForm extends Component {
   constructor(props) {
@@ -55,14 +56,13 @@ class ReviewForm extends Component {
           value={this.state.body}
           onChange={this.onChange}
         />
-        <ReviewTextInputField
+        <ReviewSelectField
           id="rating"
           label="Rating (0-10)"
           name="rating"
           value={this.state.rating}
           onChange={this.onChange}
         />
-
         <div className="button-group">
           <input className="button" type="submit" value="Submit" />
         </div>
