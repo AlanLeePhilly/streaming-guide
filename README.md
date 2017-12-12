@@ -3,10 +3,10 @@
 
 [![Code Climate](https://codeclimate.com/github/AlanLeePhilly/streaming-guide/badges/gpa.svg)](https://codeclimate.com/github/AlanLeePhilly/streaming-guide)
 
-[![Code Climate](https://codeclimate.com/github/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/badges/gpa.svg)](https://codeclimate.com/github/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 
-[![Coverage Status](https://coveralls.io/repos/github/AlanLeePhilly/streaming-guide/badge.svg?branch=master)](https://coveralls.io/github/AlanLeePhilly/streaming-guide?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/AlanLeePhilly/streaming-guide/badge.svg?branch=&service=github)](https://coveralls.io/github/AlanLeePhilly/streaming-guide?branch=master)
 
 
 * Ruby version 2.3.3
@@ -16,18 +16,18 @@
     factory_bot_rails
     jquery-rails
     launchy
-    listen (~> 3.0.5)
-    pg (~> 0.18)
+    listen (> 3.0.5)
+    pg (> 0.18)
     pry-rails
-    puma (~> 3.0)
-    rails (~> 5.1.4)
+    puma (> 3.0)
+    rails (> 5.1.4)
     rails_12factor
-    rspec-rails (~> 3.5)
-    sass-rails (~> 5.0)
+    rspec-rails (> 3.5)
+    sass-rails (> 5.0)
     shoulda
     shoulda-matchers
     spring
-    spring-watcher-listen (~> 2.0.0)
+    spring-watcher-listen (> 2.0.0)
     tzinfo-data
     uglifier (>= 1.3.0)
     valid_attribute
