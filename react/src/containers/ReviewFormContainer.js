@@ -29,11 +29,11 @@ class ReviewFormContainer extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      debugger
       if ('error' in body) {
         this.setState({ errors: body['error'] })
       } else {
         this.setState({ errors: [] })
+          this.props.getReviews(program_id)
       }
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));

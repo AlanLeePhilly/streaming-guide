@@ -8,7 +8,7 @@ class ReviewForm extends Component {
     this.state = {
       headline: '',
       body: '',
-      rating: ''
+      rating: '0'
     }
     this.handleFormSubmit=this.handleFormSubmit.bind(this)
     this.handleClearForm=this.handleClearForm.bind(this)
@@ -31,7 +31,7 @@ class ReviewForm extends Component {
     this.setState({
       headline: '',
       body: '',
-      rating: ''
+      rating: '0'
     })
   }
 

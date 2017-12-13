@@ -10,19 +10,52 @@ class ProgramShowContainer extends Component {
       program: {},
       usernames: []
     }
+    this.getReviews = this.getReviews.bind(this)
+    this.vote = this.vote.bind(this)
   }
 
   upVote(reviewId) {
-    newVote = {
-      user: current_user,
+    let newVote = {
       value: 2,
       review_id: reviewId
     }
-    
+    this.vote(newVote)
   }
 
-  componentDidMount(){
-    let programId = this.props.params.id
+  downVote(reviewId) {
+    let newVote = {
+      value: 0,
+      review_id: reviewId
+    }
+    this.vote(newVote)
+  }
+
+  vote(vote){
+    fetch(`/api/v1/programs/${this.props.params.id}/reviews/${vote.review_id}/votes`, {
+      credentials: 'same-origin',
+      method: "POST",
+      body: JSON.stringify(vote),
+      headers: {'Content-Type': 'application/json'}
+    })
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+        error = new Error(errorMessage);
+        throw(error);
+      }
+    })
+    .then(response => response.json())
+    .then(body => {
+      this.setState({
+        reviews: body['reviews']
+      })
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
+  getReviews(programId){
     fetch(`/api/v1/programs/${programId}`)
     .then(response => {
       if (response.ok) {
@@ -42,6 +75,10 @@ class ProgramShowContainer extends Component {
        })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
+  componentDidMount(){
+    this.getReviews(this.props.params.id)
   }
 
 
@@ -93,6 +130,7 @@ class ProgramShowContainer extends Component {
           <ReviewFormContainer
             program_id={this.props.params.id}
             reviews={this.state.reviews}
+            getReviews={this.getReviews}
           />
         </div>
         {reviews}
