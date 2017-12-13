@@ -23,3 +23,5 @@
 /react/coverage
 /coverage
 .env
+
+/public/uploads
