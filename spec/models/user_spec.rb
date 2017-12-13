@@ -15,7 +15,7 @@ RSpec.describe User, type: :model do
 
   it 'has a matching password confirmation for the password' do
     user = User.new
-    user.password = 'password'
+    user.password = 'pasword'
     user.password_confirmation = 'anotherpasword'
 
     expect(user).to_not be_valid
