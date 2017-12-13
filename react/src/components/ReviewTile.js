@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const ReviewTile = props => {
+
+  
+
   return(
     <div className="review-tile callout secondary large-6 medium-2 small-4 cell">
       <p>
@@ -12,6 +15,8 @@ const ReviewTile = props => {
         Rating: {props.data.rating}/10<br /> <br />
         Vote Score: {props.data.vote_count}
       </p>
+      <button className="button" onClick = {props.upVote}>Upvote</button>
+      <button className="button" onClick = {props.downVote}>Downvote</button>
     </div>
   )
 }

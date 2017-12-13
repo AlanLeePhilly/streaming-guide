@@ -9,7 +9,7 @@
 
 
 
-User.create(
+u1 = User.create(
  first_name: "chris",
  last_name: "fo",
  email:"chris123@gmail.com",
@@ -17,7 +17,7 @@ User.create(
  password: "passwordchris"
 )
 
- User.create(
+u2 = User.create(
  first_name: "christina",
  last_name: "beauregard",
  email:"christina123@gmail.com",
@@ -25,7 +25,7 @@ User.create(
  password: "passwordchristina"
 )
 
- User.create(
+u3 = User.create(
  first_name: "Alan",
  last_name: "lee",
  email:"alan123@gmail.com",
@@ -33,7 +33,7 @@ User.create(
  password: "passwordalan"
 )
 
- User.create(
+u4 = User.create(
  first_name: "James",
  last_name: "Lee",
  email:"james123@gmail.com",
@@ -54,7 +54,7 @@ Program.create(
   imdb_rating: "8.2",
   imdb_id: "tt2372162",
   total_seasons: "7",
-  user_id: "1",
+  user: u1,
 )
 
 Program.create(
@@ -70,7 +70,7 @@ Program.create(
   imdb_rating: "9.0",
   imdb_id: "tt4574334",
   total_seasons: "3",
-  user_id: "1",
+  user: u1,
 )
 
 Program.create(
@@ -86,7 +86,7 @@ Program.create(
   imdb_rating: "9.3",
   imdb_id: "tt2861424",
   total_seasons: "3",
-  user_id: "2",
+  user: u2,
 )
 
 Program.create(
@@ -102,7 +102,7 @@ Program.create(
   imdb_rating: "8.9",
   imdb_id: "tt2085059",
   total_seasons: "4",
-  user_id: "2",
+  user: u2,
 )
 
 Program.create(
@@ -118,7 +118,7 @@ Program.create(
   imdb_rating: "9.5/10",
   imdb_id: "tt0944947",
   total_seasons: "8",
-  user_id: "1",
+  user: u1,
 )
 
 Program.create(
@@ -134,7 +134,7 @@ Program.create(
   imdb_rating: "8.9/10",
   imdb_id: "tt1856010",
   total_seasons: "5",
-  user_id: "1",
+  user: u2,
 )
 
 Program.create(
@@ -150,7 +150,7 @@ Program.create(
   imdb_rating: "9.3/10",
   imdb_id: "tt2395695",
   total_seasons: "1",
-  user_id: "2",
+  user: u2,
 )
 
 Program.create(
@@ -166,7 +166,7 @@ Program.create(
   imdb_rating: "8.8/10",
   imdb_id: "tt0472954",
   total_seasons: "14",
-  user_id: "2",
+  user: u3,
 )
 
 Program.create(
@@ -182,7 +182,7 @@ Program.create(
   imdb_rating: "8.9/10",
   imdb_id: "tt2707408",
   total_seasons: "4",
-  user_id: "1",
+  user: u3,
 )
 
 Review.create(

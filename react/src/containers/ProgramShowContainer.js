@@ -12,6 +12,15 @@ class ProgramShowContainer extends Component {
     }
   }
 
+  upVote(reviewId) {
+    newVote = {
+      user: current_user,
+      value: 2,
+      review_id: reviewId
+    }
+    
+  }
+
   componentDidMount(){
     let programId = this.props.params.id
     fetch(`/api/v1/programs/${programId}`)
@@ -41,6 +50,8 @@ class ProgramShowContainer extends Component {
     let reviews = this.state.reviews.map((review, i) => {
       let date = new Date(review.created_at);
       let shortdate = (date.getMonth()+1)+'-' + date.getDate() + '-'+date.getFullYear();
+      let upVote = () => { this.upVote(review.id) }
+      let downVote = () => { this.downVote(review.id) }
       return(
         <ReviewTile
           key={review.id}
@@ -48,9 +59,12 @@ class ProgramShowContainer extends Component {
           data={review}
           username={this.state.usernames[i]}
           shortdate={shortdate}
+          upVote={upVote}
+          downVote={downVote}
         />
       )
     })
+
 
     return(
       <div>
