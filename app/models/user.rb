@@ -1,5 +1,5 @@
 # This is a model
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   has_many :reviews
