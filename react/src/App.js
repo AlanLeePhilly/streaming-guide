@@ -10,6 +10,7 @@ const App = props => {
     <Router history={browserHistory}>
       <Route path='/' >
         <IndexRoute component={ProgramsContainer} />
+        <Route path='programs' component={ProgramsContainer} />
         <Route path='programs/new' component={ProgramFormContainer} />
         <Route path='programs/:id' component={ProgramShowContainer} />
       </Route>

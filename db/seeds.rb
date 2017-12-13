@@ -8,38 +8,38 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
-User.create(
- first_name: "chris",
- last_name: "fo",
- email:"chris123@gmail.com",
- user_name: "chrisf",
- password: "passwordchris"
-)
-
- User.create(
- first_name: "christina",
- last_name: "beauregard",
- email:"christina123@gmail.com",
- user_name: "christinab",
- password: "passwordchristina"
-)
-
- User.create(
- first_name: "Alan",
- last_name: "lee",
- email:"alan123@gmail.com",
- user_name: "alanl",
- password: "passwordalan"
-)
-
- User.create(
- first_name: "James",
- last_name: "Lee",
- email:"james123@gmail.com",
- user_name: "jamesl",
- password: "passwordjames"
-)
+# 
+# User.create(
+#  first_name: "chris",
+#  last_name: "fo",
+#  email:"chris123@gmail.com",
+#  user_name: "chrisf",
+#  password: "passwordchris"
+# )
+#
+#  User.create(
+#  first_name: "christina",
+#  last_name: "beauregard",
+#  email:"christina123@gmail.com",
+#  user_name: "christinab",
+#  password: "passwordchristina"
+# )
+#
+#  User.create(
+#  first_name: "Alan",
+#  last_name: "lee",
+#  email:"alan123@gmail.com",
+#  user_name: "alanl",
+#  password: "passwordalan"
+# )
+#
+#  User.create(
+#  first_name: "James",
+#  last_name: "Lee",
+#  email:"james123@gmail.com",
+#  user_name: "jamesl",
+#  password: "passwordjames"
+# )
 
 Program.create(
   title:"Orange Is the New Black",

@@ -25,6 +25,16 @@ class Api::V1::ReviewsController < ApplicationController
     end
   end
 
+  # def destroy
+  #   review = Review.find(params[:id])
+  #   if current_user && (current_user.admin? || current_user == album.uploader)
+  #     album.destroy
+  #     render json: { message: "Deleted Album: #{album.title}" }, status: 204
+  #   else
+  #     render json: { message: 'Unauthorized to delete this album' }, status: 403
+  #   end
+  # end
+
   private
 
   def review_params

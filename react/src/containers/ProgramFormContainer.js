@@ -24,7 +24,6 @@ class ProgramFormContainer extends Component {
       if (response.ok) {
         return response;
       } else {
-        debugger
         let errorMessage = `${response.status} (${response.statusText})`,
         error = new Error(errorMessage);
         throw(error);
@@ -32,12 +31,10 @@ class ProgramFormContainer extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      debugger
       let id = body.program.length
       browserHistory.push(`/programs/${id}`)
     })
     .catch(error => {
-      debugger
       this.setState({
         error: error.message
       })
