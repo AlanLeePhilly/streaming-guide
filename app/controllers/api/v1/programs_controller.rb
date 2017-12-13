@@ -37,7 +37,7 @@ class Api::V1::ProgramsController < ApplicationController
   def destroy
     @program = Program.find(params[:id])
     @program.destroy
-    render json: { message: 'cool'}
+    render json: { message: 'cool' }
   end
 
   private
@@ -52,7 +52,7 @@ class Api::V1::ProgramsController < ApplicationController
 
   def authorize_user
     if current_user.role != 'admin'
-     render json: { error: ['Unauthorized to delete this program'] }, status: 403
+      render json: { error: ['Unauthorized to delete this program'] }, status: 403
     end
   end
 end
