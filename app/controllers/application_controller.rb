@@ -26,8 +26,8 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize_user
-    if !user_signed_in? || !current_user.admin?
-      raise ActionController::RoutingError.new('Not Found')
+    if current_user.role != 'admin'
+      render json: { error: ['Unauthorized to delete this program'] }, status: 403
     end
   end
 end

@@ -20,7 +20,9 @@ class ProgramsContainer extends Component {
   }
 
   componentDidMount(){
-    fetch('/api/v1/programs')
+    fetch('/api/v1/programs', {
+      credentials: 'same-origin'
+    })
     .then(response => {
       if (response.ok) {
         return response;

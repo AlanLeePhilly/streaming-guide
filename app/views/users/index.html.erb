@@ -1,3 +1,9 @@
-<div id="app">
-
-</div>
+<h1>hi</h1>
+<% @users.each do |user| %>
+<ul>
+  <li>
+    <%= user.user_name %>
+    <%= link_to "Delete", user, :method => 'delete' %>
+  </li>
+</ul>
+<% end %>

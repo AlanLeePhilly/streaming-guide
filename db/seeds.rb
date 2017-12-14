@@ -8,7 +8,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
 u1 = User.create(
  first_name: "chris",
  last_name: "fo",
@@ -238,36 +237,4 @@ Review.create(
     headline: "Just OK",
     body: "Didn't hate it",
     rating: 3,
-)
-
-Review.create(
-    program_id: 1,
-    user_id: 3,
-    headline: "It was dope",
-    body: "Super duper fun show",
-    rating: 5,
-)
-
-Review.create(
-    program_id: 2,
-    user_id: 1,
-    headline: "Really Dumb",
-    body: "Practically unwatchable garbage pail nonsense",
-    rating: 0,
-)
-
-Review.create(
-    program_id: 2,
-    user_id: 2,
-    headline: "bomb diggity",
-    body: "So much better than the other one.",
-    rating: 5,
-)
-
-Review.create(
-    program_id: 3,
-    user_id: 1,
-    headline: "Really Stupid",
-    body: "I did not like this show as much as I thought I would.",
-    rating: 0,
 )
