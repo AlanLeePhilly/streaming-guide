@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # devise_for :create_users
   root 'static_pages#index'
   devise_for :users
-  resources :users, only: [:show]
+  resources :users, only: [:show, :index, :destroy]
 
   resources :programs, :reviews, :votes, :genres, :programgenres
 

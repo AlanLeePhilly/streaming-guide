@@ -12,6 +12,7 @@ class ProgramShowContainer extends Component {
       reviews: [],
       program: {},
       usernames: [],
+      user: {},
       deleted: false,
       errors: []
     }
@@ -21,7 +22,9 @@ class ProgramShowContainer extends Component {
 
   componentDidMount(){
     let programId = this.props.params.id
-    fetch(`/api/v1/programs/${programId}`)
+    fetch(`/api/v1/programs/${programId}`, {
+      credentials: 'same-origin'
+    })
     .then(response => {
       if (response.ok) {
         return response;
@@ -36,7 +39,8 @@ class ProgramShowContainer extends Component {
       this.setState({
         program: body['program'],
         reviews: body['reviews'],
-        usernames: body['usernames']
+        usernames: body['usernames'],
+        user: body['user']
        })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
@@ -69,6 +73,12 @@ class ProgramShowContainer extends Component {
     let error = this.state.errors.map(x => {
       return(<li key={x}>{x} </li>)
     })
+    let deleteButton = []
+    if (this.state.user.role === 'admin') {
+      deleteButton = [<button onClick={this.handleDelete.bind(this, program)}>Delete Program</button>]
+    } else {
+      deleteButton = []
+    }
     let program = this.state.program
     let reviews = this.state.reviews.map((review, i) => {
       let date = new Date(review.created_at);
@@ -105,7 +115,7 @@ class ProgramShowContainer extends Component {
               IMDB Rating: {program.imdb_rating}<br />
               Total Seasons: {program.total_seasons}
             </p>
-            <button onClick={this.handleDelete.bind(this, program)}>Delete Program</button>
+            {deleteButton}
             {error}
           </div>
         </div>
