@@ -24,5 +24,20 @@
  }
 
  .program-tile {
-   width: 5em;
+   width: 10em;
  }
+
+.upvoted {
+  color: Green;
+}
+
+.downvoted {
+  color: red;
+}
+
+.voter {
+  width: 15px;
+}
+.pager {
+  margin-right: 1em;
+}

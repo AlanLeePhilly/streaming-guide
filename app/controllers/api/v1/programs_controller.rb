@@ -1,7 +1,7 @@
 # comment for codeclimate
 class Api::V1::ProgramsController < ApplicationController
   protect_from_forgery with: :null_session, if: proc { |c| c.request.format.json? }
-  before_action :authorize_user, except: [:index, :show, :create]
+  before_action :authorize_user, except: [:index, :create]
 
   def index
     render json: { programs: Program.all }

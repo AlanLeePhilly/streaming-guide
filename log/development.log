@@ -6439,3 +6439,1259 @@ Processing by Api::V1::VotesController#create as */*
 Completed 200 OK in 26ms (Views: 2.3ms | ActiveRecord: 8.5ms)
 
 
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 13:20:45 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 4038ms (Views: 4014.2ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:20:50 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (17.9ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 348ms (Views: 2.7ms | ActiveRecord: 66.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:26:04 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 653ms (Views: 651.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 13:26:05 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:26:07 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (6.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 1.8ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:27:27 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 592ms (Views: 589.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:27:54 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 753ms (Views: 750.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:28:56 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 596ms (Views: 593.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 13:28:57 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (4.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 31ms (Views: 25.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:28:59 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (11.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 2.4ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:29:04 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 18:29:04.794255"], ["id", 19]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 18:29:04.805672"], ["id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 43ms (Views: 2.9ms | ActiveRecord: 15.7ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:29:06 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:29:06.426282"], ["id", 19]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:29:06.435446"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 26ms (Views: 2.4ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 13:29:09 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:29:09.081370"], ["id", 17]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:29:09.089794"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 22ms (Views: 1.9ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:29:39 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 18:29:39.567315"], ["id", 19]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 18:29:39.576260"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 26ms (Views: 3.4ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:29:40 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:29:40.901483"], ["id", 19]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:29:40.910385"], ["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 33ms (Views: 2.9ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:29:42 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 18:29:42.032585"], ["id", 19]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 18:29:42.041828"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 28ms (Views: 2.4ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:29:43 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:29:43.628057"], ["id", 19]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:29:43.636882"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 25ms (Views: 2.2ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:29:52 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 18:29:52.718483"], ["id", 19]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 18:29:52.726012"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 25ms (Views: 2.2ms | ActiveRecord: 7.1ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:29:54 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:29:54.230713"], ["id", 19]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:29:54.239497"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 26ms (Views: 2.3ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:29:55 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 18:29:55.195129"], ["id", 19]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 18:29:55.202599"], ["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 29ms (Views: 2.6ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:29:56 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:29:56.505946"], ["id", 19]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:29:56.511784"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 25ms (Views: 1.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:31:07 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 586ms (Views: 584.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 13:31:09 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:31:16 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 5.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:32:49 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 613ms (Views: 611.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 13:32:51 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:32:53 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 5.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 13:35:00 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 221ms (Views: 204.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:35:01 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 3.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 13:35:19 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 175ms (Views: 169.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:35:21 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (2.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 4.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:37:12 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 115ms (Views: 103.2ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 13:37:13 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 46ms (Views: 31.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:37:15 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 34301ms (Views: 10.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 13:37:52 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 143ms (Views: 130.0ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:37:53 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `role' for nil:NilClass):
+  
+app/controllers/api/v1/programs_controller.rb:63:in `authorize_user'
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 13:38:08 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 1934ms (Views: 1921.3ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:38:11 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `role' for nil:NilClass):
+  
+app/controllers/api/v1/programs_controller.rb:63:in `authorize_user'
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:38:45 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 87.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 13:38:46 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 45ms (Views: 23.9ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:53:05 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 878ms (Views: 860.3ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:54:49 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 599ms (Views: 596.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:55:35 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 779ms (Views: 777.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:56:15 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 607ms (Views: 604.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 13:56:16 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.9ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 136ms (Views: 72.9ms | ActiveRecord: 48.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:56:59 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 612ms (Views: 609.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 13:57:01 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 13:57:19 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 687ms (Views: 684.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 13:57:21 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:01:22 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 596ms (Views: 594.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:01:24 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:01:42 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 558ms (Views: 555.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:01:43 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.0ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 14:03:17 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `role' for nil:NilClass):
+  
+app/controllers/api/v1/programs_controller.rb:62:in `authorize_user'
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 14:03:18 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 689ms (Views: 682.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 14:03:20 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `role' for nil:NilClass):
+  
+app/controllers/api/v1/programs_controller.rb:62:in `authorize_user'
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:03:23 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 64.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:03:24 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:03:26 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:03:27 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:04:42 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 582ms (Views: 580.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:04:44 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (9.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 18ms (Views: 8.3ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:07:01 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 618ms (Views: 616.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:07:03 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:07:37 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 587ms (Views: 585.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:08:59 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 741ms (Views: 739.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:09:01 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (2.0ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:10:34 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 583ms (Views: 580.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:10:36 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.0ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:10:49 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 601ms (Views: 598.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:10:50 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-14 14:10:57 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `role' for nil:NilClass):
+  
+app/controllers/api/v1/programs_controller.rb:62:in `authorize_user'
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:11:06 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 591ms (Views: 588.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:11:07 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (4.0ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:11:44 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 625ms (Views: 622.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:11:46 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:11:53 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 115.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:11:53 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (2.2ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:16:53 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 919ms (Views: 916.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:16:55 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (3.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 49ms (Views: 44.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:17:34 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 661ms (Views: 657.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:17:35 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:18:13 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 586ms (Views: 583.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:18:14 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:18:27 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 553ms (Views: 550.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:18:28 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:22:08 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 631ms (Views: 628.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:22:10 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (16.0ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 45ms (Views: 28.6ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:34:31 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 641ms (Views: 638.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:34:32 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:34:39 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 628ms (Views: 625.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:34:40 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:35:01 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 568ms (Views: 566.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:35:02 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:36:53 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 856ms (Views: 853.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:36:55 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.1ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:38:12 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 705ms (Views: 702.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:38:14 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:40:01 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 628ms (Views: 625.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:40:02 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:40:20 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 681ms (Views: 678.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:40:21 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:40:32 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:40:33 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:40:56 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:40:56 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:41:47 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 631ms (Views: 628.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:41:48 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:43:05 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 78.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:43:05 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:43:27 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:43:28 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (7.8ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 18ms (Views: 9.5ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:44:04 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 92.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:44:05 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:44:26 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 100.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:44:27 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:44:45 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:44:45 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:45:47 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 665ms (Views: 663.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:45:49 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:46:05 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 607ms (Views: 603.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:46:06 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:46:17 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 646ms (Views: 643.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:46:18 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:46:24 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 646ms (Views: 643.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:46:25 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:49:31 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 834ms (Views: 831.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:49:33 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:50:12 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 653ms (Views: 650.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:50:14 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:51:48 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 95.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:51:49 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:52:22 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 617ms (Views: 614.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:52:24 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:52:36 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 563ms (Views: 560.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:52:37 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:52:54 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 604ms (Views: 602.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:52:55 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:53:30 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 568ms (Views: 565.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:53:31 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:53:52 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 99ms (Views: 96.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:53:53 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 14:54:05 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 14:54:06 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const ProgramTile = props => {
   return(
-    <div className="large-6 medium-2 small-4 cell">
+    <div className="large-2 medium-3 small-12 columns">
       <Link to={`/programs/${props.id}`}>
         <img className="program-tile" src={props.poster_url}></img>
         <h5>{props.title}</h5>
