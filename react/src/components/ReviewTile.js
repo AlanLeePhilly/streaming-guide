@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const ReviewTile = props => {
 
-  
+
 
   return(
     <div className="review-tile callout secondary large-6 medium-2 small-4 cell">
@@ -16,7 +16,9 @@ const ReviewTile = props => {
         Vote Score: {props.data.vote_count}
       </p>
       <button className="button" onClick = {props.upVote}>Upvote</button>
+      <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
       <button className="button" onClick = {props.downVote}>Downvote</button>
+      <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
     </div>
   )
 }

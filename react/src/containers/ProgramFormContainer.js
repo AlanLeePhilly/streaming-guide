@@ -6,7 +6,7 @@ class ProgramFormContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      error: []
+      errors: []
     };
     this.addNewProgram = this.addNewProgram.bind(this)
   }

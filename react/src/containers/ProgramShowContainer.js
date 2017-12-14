@@ -8,7 +8,8 @@ class ProgramShowContainer extends Component {
     this.state = {
       reviews: [],
       program: {},
-      usernames: []
+      usernames: [],
+      userVotes: []
     }
     this.getReviews = this.getReviews.bind(this)
     this.vote = this.vote.bind(this)
@@ -49,7 +50,8 @@ class ProgramShowContainer extends Component {
     .then(response => response.json())
     .then(body => {
       this.setState({
-        reviews: body['reviews']
+        reviews: body['reviews'],
+        userVotes: body['userVotes']
       })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
@@ -71,7 +73,8 @@ class ProgramShowContainer extends Component {
       this.setState({
         program: body['program'],
         reviews: body['reviews'],
-        usernames: body['usernames']
+        usernames: body['usernames'],
+        userVotes: body['userVotes']
        })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
@@ -89,6 +92,7 @@ class ProgramShowContainer extends Component {
       let shortdate = (date.getMonth()+1)+'-' + date.getDate() + '-'+date.getFullYear();
       let upVote = () => { this.upVote(review.id) }
       let downVote = () => { this.downVote(review.id) }
+      let userVote = this.state.userVotes.filter(vote => {vote.review_id == review.id})[0]
       return(
         <ReviewTile
           key={review.id}
@@ -98,6 +102,7 @@ class ProgramShowContainer extends Component {
           shortdate={shortdate}
           upVote={upVote}
           downVote={downVote}
+          userVote={userVote}
         />
       )
     })

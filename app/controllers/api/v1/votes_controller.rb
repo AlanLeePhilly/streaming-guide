@@ -9,25 +9,32 @@ class Api::V1::VotesController < ApplicationController
     @vote = Vote.new(vote_params)
     @user = current_user
     @vote.user = @user
-    @dbVote= Vote.where('user_id = ? AND review_id = ?', @vote.user_id, @vote.review_id)
-    binding.pry
+    @dbVote= Vote.where('user_id = ? AND review_id = ?', @vote.user_id, @vote.review_id)[0]
     if @dbVote
-      @dbVote.value = @vote.value
-      @dbVote.update
+      if @dbVote.value == @vote.value
+        @dbVote.value = 1
+      else
+        @dbVote.value = @vote.value
+      end
+      @dbVote.save
+      @vote = @dbVote
+    else @vote.save
+    end
+    if @vote.persisted?
+      @votes = @vote.review.votes
+      @vote.review.vote_count = @votes.map(&:value).inject(0, &:+)-@votes.length
+      @vote.review.save
       @reviews = Program.find(params[:program_id]).reviews.reverse
-      render json: { reviews: @reviews }
-   elsif @vote.save
-        @vote.review.vote_count = @vote.review.vote_count + @vote.value - 1
-        @vote.review.save
-        @reviews = Program.find(params[:program_id]).reviews.reverse
-        render json: { reviews: @reviews }
+      @userVotes = @reviews.votes.select do |vote|
+        vote[:user_id] == @user.id
+      end
+      render json: {
+        reviews: @reviews
+        userVotes: @userVotes
+      }
     else
       render json: { error: @vote.errors.full_messages }, status: :unprocessable_entity
     end
-  end
-
-  def update
-
   end
 
   private

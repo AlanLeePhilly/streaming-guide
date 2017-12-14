@@ -1,6 +1,8 @@
 # comment for codeclimate
 class Api::V1::ProgramsController < ApplicationController
   protect_from_forgery with: :null_session, if: proc { |c| c.request.format.json? }
+  before_action :authorize_user, except: [:index, :create]
+  # attempting to authorize user
 
   def index
     render json: { programs: Program.all }
@@ -9,13 +11,18 @@ class Api::V1::ProgramsController < ApplicationController
   def show
     @program = Program.find(params[:id])
     @reviews = @program.reviews.reverse
-    @usernames = @reviews.map { |i| i.user.user_name }
     @user = current_user
+    @usernames = @reviews.map { |i| i.user.user_name }
+    binding.pry
+    @userVotes = @reviews.votes.select do |vote|
+      vote[:user_id] == @user.id
+    end
     render json: {
       program: @program,
       reviews: @reviews,
       user: @user,
-      usernames: @usernames
+      usernames: @usernames,
+      userVotes: @userVotes
     }
   end
 
