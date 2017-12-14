@@ -1,8 +1,7 @@
 # comment for codeclimate
 class Api::V1::ProgramsController < ApplicationController
   protect_from_forgery with: :null_session, if: proc { |c| c.request.format.json? }
-  before_action :authorize_user, except: [:index, :create]
-  # attempting to authorize user
+  before_action :authorize_user, except: [:index, :show, :create]
 
   def index
     render json: { programs: Program.all }
@@ -40,6 +39,12 @@ class Api::V1::ProgramsController < ApplicationController
     end
   end
 
+  def destroy
+    @program = Program.find(params[:id])
+    @program.destroy
+    render json: { message: 'cool' }
+  end
+
   private
 
   def program_params
@@ -48,5 +53,11 @@ class Api::V1::ProgramsController < ApplicationController
       :genre, :actor, :plot, :award,
       :poster_url, :imdb_rating,
       :imdb_id, :total_seasons, :user_id)
+  end
+
+  def authorize_user
+    if current_user.role != 'admin'
+      render json: { error: ['Unauthorized to delete this program'] }, status: 403
+    end
   end
 end

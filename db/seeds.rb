@@ -40,7 +40,6 @@ u4 = User.create(
  user_name: "jamesl",
  password: "passwordjames"
 )
-
 Program.create(
   title:"Orange Is the New Black",
   year:"2013-",

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import ReviewFormContainer from './ReviewFormContainer.js'
-import ReviewTile from '../components/ReviewTile'
+import ReviewFormContainer from './ReviewFormContainer.js';
+import ReviewTile from '../components/ReviewTile';
+import { Link } from 'react-router';
+import { browserHistory} from 'react-router';
+
 
 class ProgramShowContainer extends Component {
   constructor(props){
@@ -9,10 +12,14 @@ class ProgramShowContainer extends Component {
       reviews: [],
       program: {},
       usernames: [],
-      userVotes: []
+      userVotes: [],
+      deleted: false,
+      errors: []
     }
     this.getReviews = this.getReviews.bind(this)
     this.vote = this.vote.bind(this)
+    this.deleteProgram=this.deleteProgram.bind(this)
+    this.handleDelete=this.handleDelete.bind(this)
   }
 
   upVote(reviewId) {
@@ -85,7 +92,34 @@ class ProgramShowContainer extends Component {
   }
 
 
+  handleDelete(id) {
+    this.deleteProgram(id)
+  }
+
+  deleteProgram(id) {
+    let programId = this.props.params.id
+    if(confirm('Are you sure you want to delete this program')) {
+      fetch(`/api/v1/programs/${programId}`, {
+        method: 'DELETE',
+        credentials: 'same-origin'
+      })
+      .then(response => response.json())
+      .then(body => {
+        if ('error' in body) {
+          this.setState({ errors: body['error'] })
+        } else {
+          browserHistory.push('/')
+        }
+      })
+      .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+}
+
+
   render(){
+    let error = this.state.errors.map(x => {
+      return(<li key={x}>{x} </li>)
+    })
     let program = this.state.program
     let reviews = this.state.reviews.map((review, i) => {
       let date = new Date(review.created_at);
@@ -129,6 +163,8 @@ class ProgramShowContainer extends Component {
               IMDB Rating: {program.imdb_rating}<br />
               Total Seasons: {program.total_seasons}
             </p>
+            <button onClick={this.handleDelete.bind(this, program)}>Delete Program</button>
+            {error}
           </div>
         </div>
         <div>
