@@ -4924,3 +4924,1518 @@ Completed 404 Not Found in 8ms (ActiveRecord: 0.0ms)
 ActionController::RoutingError (Not Found):
   
 app/controllers/application_controller.rb:30:in `authorize_user'
+Started GET "/users/sign_out" for 127.0.0.1 at 2017-12-14 12:02:30 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 30ms (ActiveRecord: 11.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_out):
+  
+app/controllers/users_controller.rb:6:in `show'
+Started GET "/" for 127.0.0.1 at 2017-12-14 12:02:41 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 1604ms (Views: 1601.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 12:02:43 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 90ms (Views: 44.4ms | ActiveRecord: 11.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-12-14 12:02:46 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Vyj8vlV2plYZVOBy00y8pDqGS127fAc8upfkvOBwIkI5+1S/gYQ+rgz9n7wM7RWNN60kTzyUfoqD3uG1aMB7aA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 12:02:46 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 83ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 12:02:47 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 12:10:22 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3150ms (Views: 3143.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 12:10:26 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (8.9ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 86ms (Views: 50.2ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:10:33 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 20253ms (ActiveRecord: 34.4ms)
+
+
+  
+NoMethodError (undefined method `votes' for #<Array:0x007f8e3c860750>):
+  
+app/controllers/api/v1/programs_controller.rb:16:in `show'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-14 12:11:13 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (8.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 1815ms (Views: 1764.2ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-14 12:11:18 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EeitjljkixxRktYWCMzcM0585DmaEQUisDyrUW14Cny5fZeQuJq2mY6w37EtPeAIoBIrU+eNcxZsH4lfAFdUig==", "user"=>{"email"=>"jlee71884@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jlee71884@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2017-12-14 17:11:18.851943"], ["last_sign_in_at", "2017-12-14 16:42:30.794865"], ["sign_in_count", 3], ["id", 5]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 180ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 12:11:18 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 79.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 12:11:19 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (53.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 134ms (Views: 49.7ms | ActiveRecord: 66.5ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:11:23 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (2.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 151405ms (ActiveRecord: 15.8ms)
+
+
+  
+NoMethodError (undefined method `votes' for #<Array:0x007fa414aa8ce0>):
+  
+app/controllers/api/v1/programs_controller.rb:16:in `show'
+Started GET "/" for 127.0.0.1 at 2017-12-14 12:14:58 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 1395ms (Views: 1377.3ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 12:15:00 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.9ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 60ms (Views: 37.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 12:15:14 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 157ms (Views: 144.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 12:15:15 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 139ms (Views: 74.4ms | ActiveRecord: 54.9ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:15:18 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (1.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 2.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 12:18:15 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 716ms (Views: 712.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:18:17 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (2.8ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 2.5ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 12:20:54 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 624ms (Views: 620.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:20:56 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 116ms (Views: 2.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 12:21:16 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 658ms (Views: 654.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:21:18 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (1.0ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 3.0ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:21:37 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:21:38 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:21:39 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:21:39 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:21:39 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 12:23:15 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 601ms (Views: 596.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:23:17 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (1.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (2.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (58.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 2.7ms | ActiveRecord: 69.3ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:23:23 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:23:23 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:23:23 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:23:23 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:23:24 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 12:28:00 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 606ms (Views: 602.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:28:02 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (3.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (8.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (40.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 2.4ms | ActiveRecord: 67.6ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:28:05 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:28:06 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:28:07 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:28:07 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 12:28:55 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 629ms (Views: 625.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:28:57 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (1.6ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 3.2ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:29:09 -0500
+  
+SyntaxError (/Users/jameslee/challenges/group-projects/streaming-guide/app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+        userVotes: @userVotes
+                 ^):
+  
+app/controllers/api/v1/votes_controller.rb:33: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 12:30:37 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 142ms (Views: 127.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:30:38 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 167ms (Views: 3.6ms | ActiveRecord: 19.0ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:30:41 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:30:42.037048"], ["id", 16]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:30:42.053488"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 16.5ms)
+
+
+  
+NoMethodError (undefined method `votes' for #<Array:0x007fcd812212e8>):
+  
+app/controllers/api/v1/votes_controller.rb:28:in `create'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:30:42 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 17:30:42.984811"], ["id", 16]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:30:42.993638"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 7.5ms)
+
+
+  
+NoMethodError (undefined method `votes' for #<Array:0x007fcd80359b70>):
+  
+app/controllers/api/v1/votes_controller.rb:28:in `create'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:30:43 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:30:43.400401"], ["id", 16]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.8ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:30:43.421030"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 7.3ms)
+
+
+  
+NoMethodError (undefined method `votes' for #<Array:0x007fcd81152038>):
+  
+app/controllers/api/v1/votes_controller.rb:28:in `create'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:30:43 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 17:30:43.785773"], ["id", 16]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:30:43.795015"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 7.8ms)
+
+
+  
+NoMethodError (undefined method `votes' for #<Array:0x007fcd7e578160>):
+  
+app/controllers/api/v1/votes_controller.rb:28:in `create'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:30:44 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:30:44.488309"], ["id", 16]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:30:44.496745"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 6.7ms)
+
+
+  
+NoMethodError (undefined method `votes' for #<Array:0x007fcd811193a0>):
+  
+app/controllers/api/v1/votes_controller.rb:28:in `create'
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:30:55 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 17:30:55.887979"], ["id", 16]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:30:55.895582"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 6.0ms)
+
+
+  
+NoMethodError (undefined method `votes' for #<Array:0x007fcd808e90b8>):
+  
+app/controllers/api/v1/votes_controller.rb:28:in `create'
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 12:39:09 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 94ms (Views: 82.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:39:10 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (1.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 117ms (Views: 1.7ms | ActiveRecord: 44.6ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:39:14 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:39:14.408545"], ["id", 16]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:39:14.418830"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (20.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (review.program_id = 1)[0m
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT  "votes".* FROM "votes" WHERE (review.program_id = 1) LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes"[0m
+  [1m[36mVote Load (1.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (review.program_id = 1)[0m
+  [1m[36mVote Load (0.8ms)[0m  [1m[34mSELECT  "votes".* FROM "votes" WHERE (review.program_id = 1) LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (review.program_id = 1)[0m
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT  "votes".* FROM "votes" WHERE (review.program_id = 1) LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT  "votes".* FROM "votes" WHERE (review.program_id = 1) LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 2]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 1]]
+Completed 500 Internal Server Error in 215259ms (ActiveRecord: 39.9ms)
+
+
+  
+NoMethodError (undefined method `votes' for #<Array:0x007fcd802298e0>):
+  
+app/controllers/api/v1/votes_controller.rb:32:in `create'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3617048318423562225)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddingProgramIdToVotes (20171214174427)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (37.1ms)[0m  [1m[35mALTER TABLE "votes" ADD "program_id" integer NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3617048318423562225)[0m
+  [1m[36mVote Load (0.8ms)[0m  [1m[34mSELECT "votes".* FROM "votes"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "votes" WHERE "votes"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "votes" WHERE "votes"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "votes" WHERE "votes"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3617048318423562225)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddingProgramIdToVotes (20171214174427)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "votes" ADD "program_id" integer NOT NULL[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171214174427"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3617048318423562225)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-12-14 12:54:35 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2411ms (Views: 2390.1ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 12:54:38 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.1ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 131ms (Views: 32.8ms | ActiveRecord: 82.7ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:54:48 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 1.7ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:54:52 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (1.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "votes" ("user_id", "value", "created_at", "updated_at", "review_id", "program_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 5], ["value", 2], ["created_at", "2017-12-14 17:54:52.812188"], ["updated_at", "2017-12-14 17:54:52.812188"], ["review_id", 3], ["program_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:54:52.822924"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 42ms (Views: 2.1ms | ActiveRecord: 13.4ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:54:57 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:54:57.053582"], ["id", 17]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:54:57.063397"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (2.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 29ms (Views: 2.2ms | ActiveRecord: 10.8ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:54:58 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>0, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>0, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 0], ["updated_at", "2017-12-14 17:54:58.616301"], ["id", 17]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", -1], ["updated_at", "2017-12-14 17:54:58.627027"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 29ms (Views: 2.1ms | ActiveRecord: 9.2ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:55:06 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "votes" ("user_id", "value", "created_at", "updated_at", "review_id", "program_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 5], ["value", 2], ["created_at", "2017-12-14 17:55:06.774348"], ["updated_at", "2017-12-14 17:55:06.774348"], ["review_id", 7], ["program_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 22ms (Views: 2.4ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:55:07 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>0, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>0, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 0], ["updated_at", "2017-12-14 17:55:07.557963"], ["id", 18]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", -1], ["updated_at", "2017-12-14 17:55:07.566481"], ["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 25ms (Views: 2.5ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:55:08 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 17:55:08.468791"], ["id", 17]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:55:08.480514"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 34ms (Views: 2.2ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:55:09 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 17:55:09.043988"], ["id", 18]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:55:09.053093"], ["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 28ms (Views: 2.5ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:55:09 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:55:09.420857"], ["id", 17]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:55:09.430495"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 27ms (Views: 2.8ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:55:10 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:55:10.109336"], ["id", 18]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:55:10.121834"], ["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 36ms (Views: 2.2ms | ActiveRecord: 11.0ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:55:10 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 17:55:10.316344"], ["id", 17]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:55:10.326749"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 33ms (Views: 2.1ms | ActiveRecord: 10.1ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:55:10 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 17:55:10.999043"], ["id", 18]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:55:11.008216"], ["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 26ms (Views: 2.2ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:55:12 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:55:12.616171"], ["id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:55:12.624006"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 27ms (Views: 2.6ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:55:13 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:55:13.723921"], ["id", 18]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:55:13.733403"], ["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 28ms (Views: 2.7ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:55:15 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 17:55:15.686022"], ["id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:55:15.693513"], ["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 24ms (Views: 2.8ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:55:16 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 17:55:16.580875"], ["id", 18]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:55:16.590523"], ["id", 7]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 27ms (Views: 2.7ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:55:17 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:55:17.397223"], ["id", 17]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:55:17.406917"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 26ms (Views: 2.3ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:55:18 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.8ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:55:18.084146"], ["id", 18]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:55:18.094345"], ["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 33ms (Views: 2.2ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:55:18 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 17:55:18.732468"], ["id", 17]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:55:18.741823"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 26ms (Views: 2.2ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:55:19 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.8ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 17:55:19.419863"], ["id", 18]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 17:55:19.432039"], ["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 34ms (Views: 2.2ms | ActiveRecord: 10.7ms)
+
+
+Started POST "/api/v1/programs/1/reviews/3/votes" for 127.0.0.1 at 2017-12-14 12:55:20 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"3", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"3", "program_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:55:20.307020"], ["id", 17]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:55:20.316172"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 27ms (Views: 2.7ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 12:55:27 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 17:55:27.648169"], ["id", 18]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 17:55:27.655575"], ["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 24ms (Views: 2.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 12:58:56 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 114ms (Views: 101.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 12:58:58 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1[0m  [["program_id", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."rating" ASC[0m  [["program_id", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."user_id" ASC[0m  [["program_id", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."id" ASC[0m  [["program_id", 1]]
+  [1m[36mReview Load (16.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."updated_at" ASC[0m  [["program_id", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 13:02:56 -0500
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC LIMIT $2[0m  [["program_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 256546ms (Views: 1.8ms | ActiveRecord: 34.3ms)
+
+
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 220ms (Views: 188.9ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:03:16 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (14.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (3.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (19.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (43.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 247ms (Views: 3.1ms | ActiveRecord: 106.0ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-14 13:03:18 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 105.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-14 13:03:19 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 1.5ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:03:24 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "votes" ("user_id", "value", "created_at", "updated_at", "review_id", "program_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 5], ["value", 2], ["created_at", "2017-12-14 18:03:24.850939"], ["updated_at", "2017-12-14 18:03:24.850939"], ["review_id", 8], ["program_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 38ms (Views: 5.9ms | ActiveRecord: 10.3ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:03:26 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 18:03:26.518928"], ["id", 19]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 18:03:26.529238"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 31ms (Views: 2.3ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:03:26 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:03:26.714301"], ["id", 19]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:03:26.726020"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 31ms (Views: 2.6ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 13:03:30 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:03:30.075867"], ["id", 18]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:03:30.085606"], ["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 28ms (Views: 2.7ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/api/v1/programs/1/reviews/7/votes" for 127.0.0.1 at 2017-12-14 13:03:34 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>0, "review_id"=>"7", "program_id"=>"1", "vote"=>{"value"=>0, "review_id"=>"7", "program_id"=>"1"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 7)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 0], ["updated_at", "2017-12-14 18:03:34.581659"], ["id", 18]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", -1], ["updated_at", "2017-12-14 18:03:34.588895"], ["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 26ms (Views: 2.4ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:03:36 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 18:03:36.346576"], ["id", 19]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 18:03:36.355185"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 27ms (Views: 2.7ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:03:36 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.9ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:03:36.516595"], ["id", 19]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:03:36.528620"], ["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 35ms (Views: 2.4ms | ActiveRecord: 10.9ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:03:37 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>0, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>0, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 0], ["updated_at", "2017-12-14 18:03:37.562491"], ["id", 19]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", -1], ["updated_at", "2017-12-14 18:03:37.571061"], ["id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 27ms (Views: 2.8ms | ActiveRecord: 7.9ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:03:39 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:03:39.050124"], ["id", 19]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:03:39.063350"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 36ms (Views: 2.4ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:03:40 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.8ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 18:03:40.999900"], ["id", 19]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 18:03:41.009310"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 31ms (Views: 2.5ms | ActiveRecord: 9.5ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:03:41 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:03:41.337309"], ["id", 19]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:03:41.346167"], ["id", 8]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 28ms (Views: 2.6ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:03:41 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 1], ["updated_at", "2017-12-14 18:03:42.009812"], ["id", 19]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 0], ["updated_at", "2017-12-14 18:03:42.019290"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.8ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 29ms (Views: 3.1ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/api/v1/programs/1/reviews/8/votes" for 127.0.0.1 at 2017-12-14 13:03:42 -0500
+Processing by Api::V1::VotesController#create as */*
+  Parameters: {"value"=>2, "review_id"=>"8", "program_id"=>"1", "vote"=>{"value"=>2, "review_id"=>"8", "program_id"=>"1"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND review_id = 8)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "votes" SET "value" = $1, "updated_at" = $2 WHERE "votes"."id" = $3[0m  [["value", 2], ["updated_at", "2017-12-14 18:03:42.967433"], ["id", 19]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."review_id" = $1[0m  [["review_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "vote_count" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["vote_count", 1], ["updated_at", "2017-12-14 18:03:42.976765"], ["id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = '1')[0m
+Completed 200 OK in 26ms (Views: 2.3ms | ActiveRecord: 8.5ms)
+
+

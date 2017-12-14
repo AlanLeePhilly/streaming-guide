@@ -25,7 +25,8 @@ class ProgramShowContainer extends Component {
   upVote(reviewId) {
     let newVote = {
       value: 2,
-      review_id: reviewId
+      review_id: reviewId,
+      program_id: this.props.params.id
     }
     this.vote(newVote)
   }
@@ -33,7 +34,8 @@ class ProgramShowContainer extends Component {
   downVote(reviewId) {
     let newVote = {
       value: 0,
-      review_id: reviewId
+      review_id: reviewId,
+      program_id: this.props.params.id
     }
     this.vote(newVote)
   }

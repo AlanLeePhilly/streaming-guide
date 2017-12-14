@@ -15,10 +15,12 @@ const ReviewTile = props => {
         Rating: {props.data.rating}/10<br /> <br />
         Vote Score: {props.data.vote_count}
       </p>
-      <button className="button" onClick = {props.upVote}>Upvote</button>
-      <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
-      <button className="button" onClick = {props.downVote}>Downvote</button>
-      <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+      <button onClick={props.upVote} type="button" className=''>
+          <i className="fa fa-arrow-circle-o-up fa-5" aria-hidden="true" style="width: 40px"></i>
+      </button>
+      <button onClick={props.downVote} type="button" className=''>
+          <i className="fa fa-arrow-circle-o-down fa-5" aria-hidden="true"></i>
+      </button>
     </div>
   )
 }

@@ -24,12 +24,10 @@ class Api::V1::VotesController < ApplicationController
       @votes = @vote.review.votes
       @vote.review.vote_count = @votes.map(&:value).inject(0, &:+)-@votes.length
       @vote.review.save
-      @reviews = Program.find(params[:program_id]).reviews.reverse
-      @userVotes = @reviews.votes.select do |vote|
-        vote[:user_id] == @user.id
-      end
+      @reviews = Program.find(params[:program_id]).reviews.order(:created_at).reverse
+      @userVotes = Vote.where('user_id = ? AND program_id = ?', @user.id, params[:program_id])
       render json: {
-        reviews: @reviews
+        reviews: @reviews,
         userVotes: @userVotes
       }
     else
@@ -40,6 +38,6 @@ class Api::V1::VotesController < ApplicationController
   private
 
   def vote_params
-    params.require(:vote).permit(:value, :review_id)
+    params.require(:vote).permit(:value, :review_id, :program_id)
   end
 end
