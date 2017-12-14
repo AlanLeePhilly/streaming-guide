@@ -10,7 +10,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @current_user = current_user
     @reviews = @user.reviews
-
   end
 
   def destroy

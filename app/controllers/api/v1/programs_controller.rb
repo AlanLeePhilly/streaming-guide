@@ -12,7 +12,6 @@ class Api::V1::ProgramsController < ApplicationController
     @reviews = @program.reviews
     @usernames = @reviews.map { |i| i.user.user_name }
     @user = current_user
-    binding.pry
     render json: {
       program: @program,
       reviews: @reviews,
@@ -50,5 +49,4 @@ class Api::V1::ProgramsController < ApplicationController
       :poster_url, :imdb_rating,
       :imdb_id, :total_seasons, :user_id)
   end
-
 end
