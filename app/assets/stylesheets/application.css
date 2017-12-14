@@ -36,8 +36,32 @@
 }
 
 .voter {
-  width: 15px;
+  size: 200%;
 }
 .pager {
   margin-right: 1em;
+}
+.program-tile {
+  margin: auto;
+  text-align: center;
+  height: 30em;
+}
+
+.program-tile-pic {
+  margin: auto;
+  height: 25em;
+  text-align: center;
+}
+/*.index-display {
+  padding: auto;
+  margin: padding;
+
+}*/
+
+.scorebox {
+  /*border-style: solid;
+  border-width: 3px;
+  border-radius: 4px;
+  border-color: grey;
+  margin: auto;*/
 }

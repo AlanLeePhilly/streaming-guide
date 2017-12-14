@@ -8,7 +8,7 @@ class ProgramsContainer extends Component {
     this.state = {
       programs: [],
       currentPage: 1,
-      programsPerPage: 3
+      programsPerPage: 8
     }
     this.handleClick = this.handleClick.bind(this);
   }
@@ -77,13 +77,11 @@ class ProgramsContainer extends Component {
 
     return(
       <div>
-        <h1>Programs Index Page</h1>
-        <Link to='/programs/new'> Add Program </Link>
-        {/* <div className="row"> */}
-          <div className="grid-x">{renderPrograms}</div>
-          <div id="page-numbers">{renderPageNumbers}</div>
-        </div>
-      // </div>
+        <div><h1 className='grid-x align-center'>#Big_Night_In</h1></div>
+        <div className='grid-x align-center index-display callout'>{renderPrograms}</div>
+        <div className='grid-x align-center' id="page-numbers" >{renderPageNumbers}</div>
+        <div className='grid-x align-center'><Link to='/programs/new'> Add Program </Link></div>
+      </div>
     )
   }
 }

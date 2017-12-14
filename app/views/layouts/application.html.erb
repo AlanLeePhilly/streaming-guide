@@ -23,6 +23,8 @@
     <% flash.each do |key, value| %>
       <p> <%= value %> </p>
     <%end%>
-    <%= yield %>
+    <div className='grid-container'>
+      <%= yield %>
+    </div>
   </body>
 </html>

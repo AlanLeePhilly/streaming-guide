@@ -17,7 +17,7 @@ class ProgramShowContainer extends Component {
       deleted: false,
       errors: []
     }
-    this.getReviews = this.getReviews.bind(this)
+    this.getData = this.getData.bind(this)
     this.vote = this.vote.bind(this)
     this.deleteProgram=this.deleteProgram.bind(this)
     this.handleDelete=this.handleDelete.bind(this)
@@ -68,11 +68,10 @@ class ProgramShowContainer extends Component {
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
-  getReviews(programId){
+  getData(programId){
     fetch(`/api/v1/programs/${programId}`, {
       credentials: 'same-origin'
     })
-
     .then(response => {
       if (response.ok) {
         return response;
@@ -97,7 +96,7 @@ class ProgramShowContainer extends Component {
   }
 
   componentDidMount(){
-    this.getReviews(this.props.params.id)
+    this.getData(this.props.params.id)
   }
 
 
@@ -126,14 +125,25 @@ class ProgramShowContainer extends Component {
 
 
   render(){
+    let avgRating = 0
+
+    if (this.state.reviews.length > 0) {
+      this.state.reviews.forEach(review => {
+        avgRating += review.rating
+      })
+      avgRating = avgRating/this.state.reviews.length
+    }
+
     let error = this.state.errors.map(x => {
       return(<li key={x}>{x} </li>)
     })
     let deleteButton = []
-    if (this.state.user.role === 'admin') {
-      deleteButton = [<button onClick={this.handleDelete.bind(this, program)}>Delete Program</button>]
-    } else {
-      deleteButton = []
+    if (this.state.user) {
+      if (this.state.user.role === 'admin') {
+        deleteButton = [<button onClick={this.handleDelete.bind(this, program)}>Delete Program</button>]
+      } else {
+        deleteButton = []
+      }
     }
     let program = this.state.program
     let reviews = this.state.reviews.map((review, i) => {
@@ -141,7 +151,6 @@ class ProgramShowContainer extends Component {
       let shortdate = (date.getMonth()+1)+'-' + date.getDate() + '-'+date.getFullYear();
       let upVote = () => { this.upVote(review.id) }
       let downVote = () => { this.downVote(review.id) }
-      let userVote = this.state.userVotes.filter(vote => {vote.review_id == review.id})[0]
       return(
         <ReviewTile
           key={review.id}
@@ -151,22 +160,24 @@ class ProgramShowContainer extends Component {
           shortdate={shortdate}
           upVote={upVote}
           downVote={downVote}
-          userVote={userVote}
+          userVotes={this.state.userVotes}
         />
       )
     })
 
 
     return(
-      <div>
-        <h1>Program Show Container</h1>
-        <div className="row">
+      <div className='center-align'>
+        <h4>#Big_Night_In</h4>
+        <div className=''>
           <div className="large-6 small-6 small-6 columns">
-            <p>{program.title}</p>
-            <img className="show-page-poster" src={program.poster_url} />
+            <h2>{program.title}</h2>
           </div>
+          
+            <img className="show-page-poster" src={program.poster_url} />
           <div className="large-6 small-6 small-6 columns">
             <p>
+              #B_N_I Rating: {avgRating}
               <br /> <br /> <br />
               Year: {program.year}<br />
               Rated: {program.rated}<br />
@@ -186,7 +197,7 @@ class ProgramShowContainer extends Component {
           <ReviewFormContainer
             program_id={this.props.params.id}
             reviews={this.state.reviews}
-            getReviews={this.getReviews}
+            getReviews={this.getData}
           />
         </div>
         {reviews}

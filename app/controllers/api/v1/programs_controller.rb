@@ -15,9 +15,7 @@ class Api::V1::ProgramsController < ApplicationController
     @reviews = @program.reviews.order(:created_at).reverse
     if current_user
       @user = current_user
-      @userVotes = @reviews.votes.select do |vote|
-        vote[:user_id] == @user.id
-      end
+      @userVotes = Vote.where('user_id = ? AND program_id = ?', @user.id, params[:program_id])
     else
       @userVotes = []
     end
