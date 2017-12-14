@@ -9,4 +9,11 @@ RSpec.describe UsersController, type: :controller do
       expect(response).to render_template('show')
     end
   end
+
+    describe 'Get index' do
+    it 'should render a index template' do
+      get :index
+      response.should redirect_to 'http://test.host/'
+    end
+  end
 end

@@ -1,6 +1,6 @@
 # comment for codeclimate
 class Api::V1::ProgramsController < ApplicationController
-  protect_from_forgery with: :null_session, if: proc { |c| c.request.format.json? }
+  skip_before_action :verify_authenticity_token
   before_action :authorize_user, except: [:index, :show, :create]
 
   def index
@@ -12,6 +12,7 @@ class Api::V1::ProgramsController < ApplicationController
     @reviews = @program.reviews
     @usernames = @reviews.map { |i| i.user.user_name }
     @user = current_user
+    binding.pry
     render json: {
       program: @program,
       reviews: @reviews,
@@ -50,9 +51,4 @@ class Api::V1::ProgramsController < ApplicationController
       :imdb_id, :total_seasons, :user_id)
   end
 
-  def authorize_user
-    if current_user.role != 'admin'
-      render json: { error: ['Unauthorized to delete this program'] }, status: 403
-    end
-  end
 end
