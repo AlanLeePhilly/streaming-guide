@@ -45,8 +45,7 @@ class ReviewFormContainer extends Component {
     })
 
     return(
-      <div>
-        <h2>Add a New Review!</h2>
+      <div className='large-8 medium-10 small-12'>
         {errors}
         <ReviewForm
           program_id = {this.props.program_id}

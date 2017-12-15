@@ -168,39 +168,50 @@ class ProgramShowContainer extends Component {
 
     return(
       <div className='center-align'>
-        <h4>#Big_Night_In</h4>
+        <h4 className='subtitle'>#Big_Night_In</h4>
         <div className=''>
-          <div className="large-6 small-6 small-6 columns">
+          <div className="large-6 small-6 small-6 show-title">
             <h2>{program.title}</h2>
           </div>
-          
-            <img className="show-page-poster" src={program.poster_url} />
-          <div className="large-6 small-6 small-6 columns">
-            <p>
-              #B_N_I Rating: {avgRating}
-              <br /> <br /> <br />
-              Year: {program.year}<br />
-              Rated: {program.rated}<br />
-              Run Time: {program.run_time}<br />
-              Genre: {program.genre}<br />
-              Actor: {program.actor}<br />
-              Plot: {program.plot}<br />
-              Awards: {program.award}<br />
-              IMDB Rating: {program.imdb_rating}<br />
-              Total Seasons: {program.total_seasons}
-            </p>
-            {deleteButton}
-            {error}
+
+
+          <div className="grid-x">
+            <div className="large-5 medium-5 small-12 show-poster-div  cell">
+              <img className='show-poster' src={program.poster_url} />
+              <p className='bni-rating'>#B_N_I Rating: {avgRating}</p>
+            </div>
+            <div className="large-4 medium-4 small-12 show-details cell">
+              <p>
+                <br />
+                <strong>Year: </strong>{program.year}<br />
+                <strong>Rated: </strong>{program.rated}<br />
+                <strong>Run Time: </strong>{program.run_time}<br />
+                <strong>Genre: </strong>{program.genre}<br />
+                <strong>Actor: </strong>{program.actor}<br />
+                <strong>Plot: </strong>{program.plot}<br />
+                <strong>Awards: </strong>{program.award}<br />
+                <strong>IMDB Rating: </strong>{program.imdb_rating}<br />
+                <strong>Total Seasons: </strong>{program.total_seasons}
+
+              </p>
+              {deleteButton}
+              {error}
+            </div>
           </div>
+
+
+
         </div>
-        <div>
+        <div className='review-form grid-x '>
           <ReviewFormContainer
             program_id={this.props.params.id}
             reviews={this.state.reviews}
             getReviews={this.getData}
           />
         </div>
-        {reviews}
+        <div className='callout reviews'>
+          {reviews}
+        </div>
       </div>
     )
   }

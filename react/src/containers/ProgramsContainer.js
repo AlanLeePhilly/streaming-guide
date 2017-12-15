@@ -77,10 +77,10 @@ class ProgramsContainer extends Component {
 
     return(
       <div>
-        <div><h1 className='grid-x align-center'>#Big_Night_In</h1></div>
-        <div className='grid-x align-center index-display callout'>{renderPrograms}</div>
+        <div><h1 className='grid-x align-center title'>#Big_Night_In</h1></div>
+        <div className='grid-x align-center index-display '>{renderPrograms}</div>
         <div className='grid-x align-center' id="page-numbers" >{renderPageNumbers}</div>
-        <div className='grid-x align-center'><Link to='/programs/new'> Add Program </Link></div>
+        <div className='grid-x align-center add-program-link'><Link to='/programs/new'> Add Program </Link></div>
       </div>
     )
   }
