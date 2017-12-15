@@ -38,7 +38,7 @@ class ProgramForm extends Component {
   externalAPIFetch(imdbUrl){
     let start = imdbUrl.indexOf("title")+6
     let imdbId = imdbUrl.substring(start, start+9)
-    fetch(`http://www.omdbapi.com/?i=${imdbId}&apikey=2875cd3c`)
+    fetch(`https://www.omdbapi.com/?i=${imdbId}&apikey=2875cd3c`)
     .then(response => {
       if (response.ok) {
         return response;
