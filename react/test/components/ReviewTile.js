@@ -27,7 +27,7 @@ describe('ReviewTile', () => {
   });
 
   it('should render a div tag', () => {
-     expect(wrapper.find('div').length).toEqual(3);
+     expect(wrapper.find('div').length).toEqual(4);
   });
 
   it('should render a p tag', () => {
