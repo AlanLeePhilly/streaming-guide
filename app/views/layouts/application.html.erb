@@ -17,7 +17,12 @@
 
   <body>
     <div class="top-bar flex-title">
-      <div class="title-main"><%= link_to image_tag('tv clip.png'), '/'%></div>
+      <div class="title-main"><%= link_to image_tag('tv clip.png'), '/'%>
+      <div class='admin-link'>
+      <% if current_user && current_user.role == 'admin' %>
+      <%= link_to 'Admin', users_path %>
+      <% end %>
+      </div></div>
       <% if current_user %>
         <%= link_to current_user.user_name, user_path(current_user.id)  %>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>

@@ -54,6 +54,13 @@ body {
   font-family: Kanit;
   font-weight: 400;
 }
+
+.admin-link {
+  font-weight: 400;
+  font-size: 75%;
+  text-align: center;
+}
+
 .callout {
   background-color: #292929;
 }
