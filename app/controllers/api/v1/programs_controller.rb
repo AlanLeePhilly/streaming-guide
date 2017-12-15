@@ -34,10 +34,11 @@ class Api::V1::ProgramsController < ApplicationController
     if current_user
       @user = current_user
       @program.user = @user
+    else
+      return render json: { error: ['You must be logged in to do that!'] }
     end
-
     if @program.save
-      render json: { program: Program.where(params[:program_id]) }
+      return render json: { program: Program.find(@program.id) }
     else
       render json: { error: @program.errors.full_messages }, status: :unprocessable_entity
     end

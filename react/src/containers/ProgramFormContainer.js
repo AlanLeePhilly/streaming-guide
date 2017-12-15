@@ -21,7 +21,7 @@ class ProgramFormContainer extends Component {
       credentials: 'same-origin'
     })
     .then(response => {
-      if (response.ok || response.status === 422) {
+      if (response.ok || response.status === 422 || response.status === 404) {
         return response;
       } else {
         let errorMessage = `${response.status} (${response.statusText})`,
@@ -35,8 +35,7 @@ class ProgramFormContainer extends Component {
         this.setState({ errors: body['error'] })
       } else {
         this.setState({ errors: [] })
-        let id = body.program.length
-        browserHistory.push(`/programs/${id}`)
+        browserHistory.push(`/programs/${body.program.id}`)
       }
     })
     .catch(error => {
