@@ -6,7 +6,7 @@ class ProgramFormContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      error: ''
+      errors: []
     };
     this.addNewProgram = this.addNewProgram.bind(this)
   }
@@ -21,7 +21,7 @@ class ProgramFormContainer extends Component {
       credentials: 'same-origin'
     })
     .then(response => {
-      if (response.ok) {
+      if (response.ok || response.status === 422) {
         return response;
       } else {
         let errorMessage = `${response.status} (${response.statusText})`,
@@ -31,8 +31,13 @@ class ProgramFormContainer extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      let id = body.program.length
-      browserHistory.push(`/programs/${id}`)
+      if ('error' in body) {
+        this.setState({ errors: body['error'] })
+      } else {
+        this.setState({ errors: [] })
+        let id = body.program.length
+        browserHistory.push(`/programs/${id}`)
+      }
     })
     .catch(error => {
       this.setState({
@@ -42,13 +47,17 @@ class ProgramFormContainer extends Component {
     });
   }
   render(){
+    let errors = this.state.errors.map(error => {
+      return( <li>{error}</li> )
+    })
+
     return(
       <div>
         <ProgramForm
           addNewProgram= {this.addNewProgram}
         />
 
-        <p>{this.state.error}</p>
+        {errors}
       </div>
     )
   }

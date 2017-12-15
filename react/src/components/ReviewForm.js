@@ -8,7 +8,7 @@ class ReviewForm extends Component {
     this.state = {
       headline: '',
       body: '',
-      rating: ''
+      rating: '0'
     }
     this.handleFormSubmit=this.handleFormSubmit.bind(this)
     this.handleClearForm=this.handleClearForm.bind(this)
@@ -31,7 +31,7 @@ class ReviewForm extends Component {
     this.setState({
       headline: '',
       body: '',
-      rating: ''
+      rating: '0'
     })
   }
 
@@ -42,6 +42,7 @@ class ReviewForm extends Component {
   render() {
     return(
       <form className='callout' onSubmit={this.handleFormSubmit}>
+        <h4 className='new-review-title'>Add a New Review!</h4>
         <ReviewTextInputField
           id="headline"
           label="Headline"

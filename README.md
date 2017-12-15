@@ -1,7 +1,6 @@
 # README
 [![Build Status](https://codeship.com/projects/c37cb830-bb59-0135-37fd-46dcf572bfca/status?branch=master)
 
-[![Code Climate](https://codeclimate.com/github/AlanLeePhilly/streaming-guide/badges/gpa.svg)](https://codeclimate.com/github/AlanLeePhilly/streaming-guide)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 

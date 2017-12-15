@@ -8,7 +8,6 @@ feature 'edit profile' do
     visit '/users/edit'
 
     expect(page).to have_content('Email')
-    expect(page).to have_content('Home')
     expect(page).to have_content('Sign In')
     expect(page).to have_content('Sign Up')
     expect(page).to have_content('Password')

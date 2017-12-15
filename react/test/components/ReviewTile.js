@@ -21,12 +21,13 @@ describe('ReviewTile', () => {
         data={data}
         username='this username'
         shortdate='this shortdate'
+        userVotes={[]}
       />
     );
   });
 
   it('should render a div tag', () => {
-     expect(wrapper.find('div').length).toEqual(1);
+     expect(wrapper.find('div').length).toEqual(3);
   });
 
   it('should render a p tag', () => {

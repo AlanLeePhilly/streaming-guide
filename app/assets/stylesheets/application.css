@@ -19,10 +19,135 @@
 
 /* HOSTING CSS IN HERE BECAUSE REQUIRE NOT WORKING RIGHT NOW*/
 
- .show-page-poster {
-   width: 15em;
+label {
+  color: white;
+}
+
+body {
+  background-color: #292929;
+  color: white;
+  padding-bottom: 25px;
+}
+
+.avatar {
+  height: 15rem;
+}
+
+/*.review-form {
+  margin-right: 15em;
+}*/
+
+.new-review-title {
+  color: white;
+}
+
+.title {
+  /*color: #5BFCEF;*/
+     color: #269CC4;
+  font-family: Kanit;
+  font-weight: 400;
+  font-size: 500%;
+}
+
+.subtitle {
+  color: #269CC4;
+  font-family: Kanit;
+  font-weight: 400;
+}
+.callout {
+  background-color: #292929;
+}
+ .show-poster-div {
+   width: 10em;
+ }
+ strong {
+   color: #269CC4;
+ }
+
+ .show-poster {
+
+ }
+
+ .bni-rating {
+   margin-left: 5em;
+ }
+
+ .show-details {
+   /*padding-right: 15em;*/
  }
 
  .program-tile {
-   width: 5em;
+   width: 10em;
  }
+
+.upvoted {
+  color: Green;
+}
+
+.downvoted {
+  color: red;
+}
+
+.voter {
+  size: 200%;
+}
+.pager {
+  margin-right: 1em;
+}
+.program-tile {
+  margin: auto;
+  text-align: center;
+  height: 30em;
+}
+
+.program-tile-pic {
+  margin: auto;
+  height: 25em;
+  width: inherit;
+  text-align: center;
+}
+/*.index-display {
+  padding: auto;
+  margin: padding;
+
+}*/
+.grid-container {
+  max-width: 80rem;
+}
+
+.new-user {
+  width: 75%;
+}
+
+.title-main {
+  width: 80px;
+  height: inherit;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+.top-bar{
+  font-weight: bold;
+  font-size: 150%;
+  height: 5em;
+  background-image: url('http://www.themesltd.com/headers2/starry_night_sky.png')
+}
+
+.add-program-link {
+  font-size: 200%;
+  font-weight: 700;
+}
+
+.index-text {
+  /*color: white;*/
+}
+.callout {
+  border-style: none;
+}
+
+.scorebox {
+  /*border-style: solid;
+  border-width: 3px;
+  border-radius: 4px;
+  border-color: grey;
+  margin: auto;*/
+}

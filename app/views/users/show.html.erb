@@ -6,9 +6,9 @@
 <% end%>
 
 <% if @user.avatar %>
-  <img src="<%= @user.avatar %>"/>
+  <img class="avatar" src="<%= @user.avatar %>"/>
 <% else %>
-  <%= image_tag "/assests/default_pic.jpg"%>
+  <%= image_tag "/assests/default_pic.jpg", class:'avatar'%>
 <%end%>
 
 <h3>Favorite Show: </h3>
