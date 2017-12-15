@@ -40,7 +40,7 @@ class Api::V1::ProgramsController < ApplicationController
     if @program.save
       return render json: { program: Program.find(@program.id) }
     else
-      render json: { error: @program.errors.full_messages }, status: :unprocessable_entity
+      render json: { error: ['This imdb program doesn\'t look like a tv show to us!'] }, status: :unprocessable_entity
     end
   end
 

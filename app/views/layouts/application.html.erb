@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>StreamGuide</title>
+    <title>#Big_Night_In</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -29,7 +29,7 @@
       <% end %>
     </div>
     <% flash.each do |key, value| %>
-      <p> <%= value %> </p>
+      <p class='flash-alert'> <%= value %> </p>
     <%end%>
     <div class='grid-container'>
       <%= yield %>

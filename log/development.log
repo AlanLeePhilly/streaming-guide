@@ -15647,3 +15647,1977 @@ Processing by Api::V1::ProgramsController#show as */*
 Completed 200 OK in 474ms (Views: 23.7ms | ActiveRecord: 6.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:32:27 -0500
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-15 10:32:29 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-15 10:32:31 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3617048318423562225)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddingIndexToVotes (20171213210236)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_votes_on_user_id_and_review_id" ON "votes"  ("user_id", "review_id")[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171213210236"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddingProgramIdToVotes (20171214174427)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "votes" ADD "program_id" integer NOT NULL[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171214174427"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3617048318423562225)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-15 10:33:04 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2253ms (Views: 2237.3ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-15 10:33:19 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/programs" for 127.0.0.1 at 2017-12-15 10:33:23 -0500
+Processing by ProgramsController#index as HTML
+  Rendering programs/index.html.erb within layouts/application
+  Rendered programs/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:33:29 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-12-15 10:33:31 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 68ms (Views: 38.0ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-12-15 10:33:33 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z/d9j5lE/tTc3iDD9HNHupByDN+Sz+FqNtXYzG/GJSzQLO06zvnhqk5nHrj5jRcSIY2RTww2CLCLbnfOlmXLIQ=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = $1 WHERE "users"."id" = $2[0m  [["remember_created_at", nil], ["id", 1]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 28ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:33:33 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:33:35 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 66ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:33:36 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:35:10 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 664ms (Views: 662.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:37:55 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:41:19 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 747ms (Views: 744.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 10:41:20 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (2.8ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 44ms (Views: 23.5ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/api/v1/programs/23" for 127.0.0.1 at 2017-12-15 10:41:39 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mProgram Load (0.9ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mReview Load (4.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 23]]
+Completed 200 OK in 30ms (Views: 1.1ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 10:41:48 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (2.0ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:41:49 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 10:41:50 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs/30" for 127.0.0.1 at 2017-12-15 10:41:51 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"30"}
+  [1m[36mProgram Load (0.8ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 30]]
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:41:53 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 10:41:54 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.8ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs/32" for 127.0.0.1 at 2017-12-15 10:41:59 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"32"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 32]]
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/programs/32" for 127.0.0.1 at 2017-12-15 10:42:32 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"32"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/32" for 127.0.0.1 at 2017-12-15 10:42:33 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"32"}
+  [1m[36mProgram Load (1.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 32]]
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:42:37 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 10:42:38 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs/36" for 127.0.0.1 at 2017-12-15 10:43:01 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"36"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 36]]
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-15 10:43:04 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 82ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-15 10:43:16 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VSVZaP9elWAB1w9g7OLLmDzmJ6t6NxYsYZ2WGkHVXGT7KJruoRjpKWC3vchQ/qlLywQfW7N90tEaydezU54Unw==", "user"=>{"email"=>"batman@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "batman@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VSVZaP9elWAB1w9g7OLLmDzmJ6t6NxYsYZ2WGkHVXGT7KJruoRjpKWC3vchQ/qlLywQfW7N90tEaydezU54Unw==", "user"=>{"email"=>"batman@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 195ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-12-15 10:43:28 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-15 10:43:55 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wop/+N1eKzY0/QHLKO9KIFE7iKuH1Y8B1GiYAxoWSpP0h7x+gxhXf1Wds2OU8yjzptmwW06fS/yvPNmqCF0CaA==", "user"=>{"first_name"=>"christina", "last_name"=>"bea", "user_name"=>"cbea", "email"=>"cbea@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cbea@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cbea@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (5.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "christina"], ["last_name", "bea"], ["user_name", "cbea"], ["email", "cbea@gmail.com"], ["encrypted_password", "$2a$11$EJcAyF3ytg.70WRHuSdya.ov66wPi/fNopqnxsQJL4N3EgLREXbNu"]]
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5 WHERE "users"."id" = $6[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-12-15 15:43:55.566426"], ["last_sign_in_at", "2017-12-15 15:43:55.566426"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 168ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:43:55 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 10:43:56 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs/30" for 127.0.0.1 at 2017-12-15 10:44:00 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"30"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 30]]
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (1.4ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = NULL)[0m
+Completed 200 OK in 27ms (Views: 3.0ms | ActiveRecord: 10.6ms)
+
+
+Started POST "/api/v1/programs/30/reviews" for 127.0.0.1 at 2017-12-15 10:44:17 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"YASSSSSSSSSSSSS", "body"=>"LOVE LOVE LOVE", "rating"=>"5", "program_id"=>"30", "review"=>{"program_id"=>"30", "headline"=>"YASSSSSSSSSSSSS", "body"=>"LOVE LOVE LOVE", "rating"=>"5"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "reviews" ("program_id", "user_id", "headline", "body", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["program_id", 30], ["user_id", 5], ["headline", "YASSSSSSSSSSSSS"], ["body", "LOVE LOVE LOVE"], ["rating", 5], ["created_at", "2017-12-15 15:44:17.298606"], ["updated_at", "2017-12-15 15:44:17.298606"]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 35ms (Views: 1.0ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/api/v1/programs/30" for 127.0.0.1 at 2017-12-15 10:44:17 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"30"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 30]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = NULL)[0m
+Completed 200 OK in 15ms (Views: 3.0ms | ActiveRecord: 2.9ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mProgram Load (1.0ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (196.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "stream-guide_development"[0m
+  [1m[35m (227.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "stream-guide_test"[0m
+  [1m[35m (537.3ms)[0m  [1m[35mCREATE DATABASE "stream-guide_development" ENCODING = 'unicode'[0m
+  [1m[35m (454.2ms)[0m  [1m[35mCREATE DATABASE "stream-guide_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "genres" CASCADE[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "genres" ("id" bigserial primary key, "name" character varying NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "programgenres" CASCADE[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "programgenres" ("id" bigserial primary key, "genre_id" integer NOT NULL, "program_id" integer NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "programs" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "programs" ("id" bigserial primary key, "title" character varying NOT NULL, "year" character varying NOT NULL, "rated" character varying NOT NULL, "run_time" character varying NOT NULL, "genre" character varying NOT NULL, "actor" character varying NOT NULL, "plot" character varying NOT NULL, "award" character varying NOT NULL, "poster_url" character varying NOT NULL, "imdb_rating" character varying NOT NULL, "imdb_id" character varying NOT NULL, "total_seasons" integer NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "program_id" integer NOT NULL, "user_id" integer NOT NULL, "headline" character varying NOT NULL, "body" character varying NOT NULL, "rating" integer NOT NULL, "vote_count" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "user_name" character varying NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "favorite_show" character varying, "avatar" character varying, "role" character varying DEFAULT 'member' NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "votes" CASCADE[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "votes" ("id" bigserial primary key, "user_id" integer NOT NULL, "value" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "review_id" integer NOT NULL, "program_id" integer NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_votes_on_user_id_and_review_id" ON "votes"  ("user_id", "review_id")[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171214174427)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171213210236),
+(20171208170754),
+(20171206180300),
+(20171206175943),
+(20171206175455),
+(20171206142357),
+(20171207171040),
+(20171206175200),
+(20171206201314),
+(20171207182349),
+(20171206175730);
+
+[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-15 15:46:22.833221"], ["updated_at", "2017-12-15 15:46:22.833221"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "genres" CASCADE[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "genres" ("id" bigserial primary key, "name" character varying NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "programgenres" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "programgenres" ("id" bigserial primary key, "genre_id" integer NOT NULL, "program_id" integer NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "programs" CASCADE[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "programs" ("id" bigserial primary key, "title" character varying NOT NULL, "year" character varying NOT NULL, "rated" character varying NOT NULL, "run_time" character varying NOT NULL, "genre" character varying NOT NULL, "actor" character varying NOT NULL, "plot" character varying NOT NULL, "award" character varying NOT NULL, "poster_url" character varying NOT NULL, "imdb_rating" character varying NOT NULL, "imdb_id" character varying NOT NULL, "total_seasons" integer NOT NULL, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "program_id" integer NOT NULL, "user_id" integer NOT NULL, "headline" character varying NOT NULL, "body" character varying NOT NULL, "rating" integer NOT NULL, "vote_count" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "user_name" character varying NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "favorite_show" character varying, "avatar" character varying, "role" character varying DEFAULT 'member' NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "votes" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "votes" ("id" bigserial primary key, "user_id" integer NOT NULL, "value" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "review_id" integer NOT NULL, "program_id" integer NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_votes_on_user_id_and_review_id" ON "votes"  ("user_id", "review_id")[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171214174427)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171213210236),
+(20171208170754),
+(20171206180300),
+(20171206175943),
+(20171206175455),
+(20171206142357),
+(20171207171040),
+(20171206175200),
+(20171206201314),
+(20171207182349),
+(20171206175730);
+
+[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-15 15:46:22.952873"], ["updated_at", "2017-12-15 15:46:22.952873"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "chris123@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "chris123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "chris"], ["last_name", "fo"], ["user_name", "chrisf"], ["email", "chris123@gmail.com"], ["encrypted_password", "$2a$11$7Oh3P816xXMzEHXjNdPpN.JhR5c32meDZEioniFbC/PCTSOdFdPJS"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "christina123@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "christina123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "christina"], ["last_name", "beauregard"], ["user_name", "christinab"], ["email", "christina123@gmail.com"], ["encrypted_password", "$2a$11$86dfI5fIK4.GuWEUY1jrx.YJHdXxGoHYuQx/71UK6GadYWgnrEyYe"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alan123@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alan123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Alan"], ["last_name", "lee"], ["user_name", "alanl"], ["email", "alan123@gmail.com"], ["encrypted_password", "$2a$11$66VSlUb/ZLMWxKP/Pz0GQOcS1W.vsp6XyVACwc4s8dP/F1q6nKSjW"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "james123@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "james123@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "James"], ["last_name", "Lee"], ["user_name", "jamesl"], ["email", "james123@gmail.com"], ["encrypted_password", "$2a$11$yuj3CxcxBZF.WO7hRhLNwutgpcdASr7O4uG0djlnVFeOwePX9HSCe"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Orange Is the New Black"], ["year", "2013-"], ["rated", "TV-MA"], ["run_time", "59 min"], ["genre", "Comedy, Crime, Drama"], ["actor", "Taylor Schilling, Uzo Aduba, Danielle Brooks, Selenis Leyva"], ["plot", "Convicted of a decade old crime of transporting drug money to an ex-girlfriend, normally law abiding Piper Chapman is sentenced to a year and a half behind bars to face the reality of how life changing prison can really be."], ["award", "Nominated for 6 Golden Globes. Another 46 wins & 118 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU1OTcwNjg2Nl5BMl5BanBnXkFtZTgwOTk0NTk0MjI@._V1_SX300.jpg"], ["imdb_rating", "8.2"], ["imdb_id", "tt2372162"], ["total_seasons", 7], ["user_id", 1], ["created_at", "2017-12-15 15:46:23.551896"], ["updated_at", "2017-12-15 15:46:23.551896"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Stranger Things"], ["year", "2016-"], ["rated", "TV-14"], ["run_time", "51 min"], ["genre", "Drama, Fantasy, Horror"], ["actor", "Winona Ryder, David Harbour, Finn Wolfhard, Millie Bobby Brown"], ["plot", "When a young boy disappears, his mother, a police chief, and his friends must confront terrifying forces in order to get him back."], ["award", "Nominated for 2 Golden Globes. Another 23 wins & 93 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMjUwMDgzOTg3Nl5BMl5BanBnXkFtZTgwNTI4MDk5MzI@._V1_SX300.jpg"], ["imdb_rating", "9.0"], ["imdb_id", "tt4574334"], ["total_seasons", 3], ["user_id", 1], ["created_at", "2017-12-15 15:46:23.556855"], ["updated_at", "2017-12-15 15:46:23.556855"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Rick and Morty"], ["year", "2013-"], ["rated", "TV-14"], ["run_time", "23 min"], ["genre", "Animation, Adventure, Comedy"], ["actor", "Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland"], ["plot", "An animated series that follows the exploits of a super scientist and his not-so-bright grandson."], ["award", "4 wins & 7 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg"], ["imdb_rating", "9.3"], ["imdb_id", "tt2861424"], ["total_seasons", 3], ["user_id", 2], ["created_at", "2017-12-15 15:46:23.560330"], ["updated_at", "2017-12-15 15:46:23.560330"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Black Mirror"], ["year", "2011-"], ["rated", "TV-MA"], ["run_time", "60 min"], ["genre", "Drama, Sci-Fi, Thriller"], ["actor", "annah John-Kamen, Michaela Coel, Beatrice Robertson-Jones, Daniel Westwood"], ["plot", "A television anthology series that shows the dark side of life and technology."], ["award", "Won 2 Primetime Emmys. Another 6 wins & 28 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMDRmOTZlOTEtNDdkMS00Yjg4LWJlYjgtZjA2NzkwZjMyNTk2XkEyXkFqcGdeQXVyMjYwNDA2MDE@._V1_SX300.jpg"], ["imdb_rating", "8.9"], ["imdb_id", "tt2085059"], ["total_seasons", 4], ["user_id", 2], ["created_at", "2017-12-15 15:46:23.563675"], ["updated_at", "2017-12-15 15:46:23.563675"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Game of Throne"], ["year", "2011-"], ["rated", "TV-MA"], ["run_time", "57 min"], ["genre", "Adventure, Drama, Fantasy"], ["actor", "Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington"], ["plot", "Nine noble families fight for control over the mythical lands of Westeros, while a forgotten race returns after being dormant for thousands of years."], ["award", "Won 1 Golden Globe. Another 252 wins & 427 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE3NTQ1NDg1Ml5BMl5BanBnXkFtZTgwNzY2NDA0MjI@._V1_SX300.jpg"], ["imdb_rating", "9.5/10"], ["imdb_id", "tt0944947"], ["total_seasons", 8], ["user_id", 1], ["created_at", "2017-12-15 15:46:23.566896"], ["updated_at", "2017-12-15 15:46:23.566896"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "House of Cards"], ["year", "2013-"], ["rated", "TV-MA"], ["run_time", "51 min"], ["genre", "Drama"], ["actor", "Robin Wright, Kevin Spacey, Michael Kelly, Derek Cecil"], ["plot", "A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him."], ["award", "Won 2 Golden Globes. Another 27 wins & 195 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM3ODMyMjc3MV5BMl5BanBnXkFtZTgwNDgzNDc5NzE@._V1_SX300.jpg"], ["imdb_rating", "8.9/10"], ["imdb_id", "tt1856010"], ["total_seasons", 5], ["user_id", 2], ["created_at", "2017-12-15 15:46:23.570467"], ["updated_at", "2017-12-15 15:46:23.570467"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Cosmos: A Spacetime Odyssey"], ["year", "2014"], ["rated", "TV-PG"], ["run_time", "557 min"], ["genre", "Documentary"], ["actor", "Neil deGrasse Tyson"], ["plot", "A documentary series that explores how we discovered the laws of nature and found our coordinates in space and time."], ["award", "Won 4 Primetime Emmys. Another 12 wins & 22 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc5NzgwNDE3N15BMl5BanBnXkFtZTgwNDAxMTY5MTE@._V1._CR51,41,938,1336_SY132_CR2,0,89,132_AL_.jpg_V1_SX300.jpg"], ["imdb_rating", "9.3/10"], ["imdb_id", "tt2395695"], ["total_seasons", 1], ["user_id", 2], ["created_at", "2017-12-15 15:46:23.574081"], ["updated_at", "2017-12-15 15:46:23.574081"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "It's Always Sunny in Philadelphia"], ["year", "2005-"], ["rated", "TV-MA"], ["run_time", "22 min"], ["genre", "Comedy"], ["actor", "Charlie Day, Glenn Howerton, Rob McElhenney, Kaitlin Olson"], ["plot", "Five friends with big egos and slightly arrogant attitudes are the proprietors of an Irish bar in Philadelphia."], ["award", "Nominated for 3 Primetime Emmys. Another 3 wins & 8 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc5NzgwNDE3N15BMl5BanBnXkFtZTgwNDAxMTY5MTE@._V1._CR51,41,938,1336_SY132_CR2,0,89,132_AL_.jpg_V1_SX300.jpg"], ["imdb_rating", "8.8/10"], ["imdb_id", "tt0472954"], ["total_seasons", 14], ["user_id", 3], ["created_at", "2017-12-15 15:46:23.577539"], ["updated_at", "2017-12-15 15:46:23.577539"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Narcos"], ["year", "2015-"], ["rated", "TV-MA"], ["run_time", "48 min"], ["genre", "Biography, Crime, Drama"], ["actor", "Pedro Pascal, Wagner Moura, Boyd Holbrook, Alberto Ammann"], ["plot", "A chronicled look at the criminal exploits of Colombian drug lord Pablo Escobar, as well as the many other drug kingpins who plagued the country through the years."], ["award", "Nominated for 2 Golden Globes. Another 4 wins & 16 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0ODQ4NDg2OF5BMl5BanBnXkFtZTgwNzczNTE4OTE@._V1_SX300.jpg"], ["imdb_rating", "8.9/10"], ["imdb_id", "tt2707408"], ["total_seasons", 4], ["user_id", 3], ["created_at", "2017-12-15 15:46:23.580930"], ["updated_at", "2017-12-15 15:46:23.580930"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("program_id", "user_id", "headline", "body", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["program_id", 1], ["user_id", 1], ["headline", "Really Stupid"], ["body", "I did not like this show as much as I thought I would."], ["rating", 0], ["created_at", "2017-12-15 15:46:23.613676"], ["updated_at", "2017-12-15 15:46:23.613676"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("program_id", "user_id", "headline", "body", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["program_id", 1], ["user_id", 2], ["headline", "Just OK"], ["body", "Didn't hate it"], ["rating", 3], ["created_at", "2017-12-15 15:46:23.621809"], ["updated_at", "2017-12-15 15:46:23.621809"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("program_id", "user_id", "headline", "body", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["program_id", 1], ["user_id", 3], ["headline", "It was dope"], ["body", "Super duper fun show"], ["rating", 5], ["created_at", "2017-12-15 15:46:23.627857"], ["updated_at", "2017-12-15 15:46:23.627857"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("program_id", "user_id", "headline", "body", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["program_id", 2], ["user_id", 1], ["headline", "Really Dumb"], ["body", "Practically unwatchable garbage pail nonsense"], ["rating", 0], ["created_at", "2017-12-15 15:46:23.634028"], ["updated_at", "2017-12-15 15:46:23.634028"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("program_id", "user_id", "headline", "body", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["program_id", 2], ["user_id", 2], ["headline", "bomb diggity"], ["body", "So much better than the other one."], ["rating", 5], ["created_at", "2017-12-15 15:46:23.639717"], ["updated_at", "2017-12-15 15:46:23.639717"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("program_id", "user_id", "headline", "body", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["program_id", 3], ["user_id", 1], ["headline", "Really Stupid"], ["body", "I did not like this show as much as I thought I would."], ["rating", 0], ["created_at", "2017-12-15 15:46:23.645140"], ["updated_at", "2017-12-15 15:46:23.645140"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("program_id", "user_id", "headline", "body", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["program_id", 1], ["user_id", 2], ["headline", "Just OK"], ["body", "Didn't hate it"], ["rating", 3], ["created_at", "2017-12-15 15:46:23.650536"], ["updated_at", "2017-12-15 15:46:23.650536"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/programs/30" for 127.0.0.1 at 2017-12-15 10:46:50 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"30"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2338ms (Views: 2323.1ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/api/v1/programs/30" for 127.0.0.1 at 2017-12-15 10:46:53 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"30"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+Completed 404 Not Found in 23ms (ActiveRecord: 7.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=30):
+  
+app/controllers/api/v1/programs_controller.rb:14:in `show'
+Started GET "/programs/30" for 127.0.0.1 at 2017-12-15 10:46:56 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"30"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/30" for 127.0.0.1 at 2017-12-15 10:46:57 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"30"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=30):
+  
+app/controllers/api/v1/programs_controller.rb:14:in `show'
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:47:02 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 10:47:03 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 10:47:06 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 1.5ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 10:48:59 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 708ms (Views: 706.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 10:49:00 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 10:50:12 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 709ms (Views: 705.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 10:56:07 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 629ms (Views: 627.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 10:56:44 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 855ms (Views: 854.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 10:56:45 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-15 10:56:46 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 2.6ms | ActiveRecord: 4.2ms)
+
+
+Started DELETE "/api/v1/programs/1/reviews/7" for 127.0.0.1 at 2017-12-15 10:56:54 -0500
+Processing by Api::V1::ReviewsController#destroy as */*
+  Parameters: {"program_id"=>"1", "id"=>"7"}
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 7]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-15 10:57:29 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 753ms (Views: 751.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-15 10:57:30 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 1.6ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/api/v1/programs/1/reviews/3" for 127.0.0.1 at 2017-12-15 10:57:36 -0500
+Processing by Api::V1::ReviewsController#destroy as */*
+  Parameters: {"program_id"=>"1", "id"=>"3"}
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/programs/undefined" for 127.0.0.1 at 2017-12-15 10:57:36 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=undefined):
+  
+app/controllers/api/v1/programs_controller.rb:14:in `show'
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-15 10:58:13 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 715ms (Views: 713.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-15 10:58:15 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 1.0ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/api/v1/programs/1/reviews/2" for 127.0.0.1 at 2017-12-15 10:58:18 -0500
+Processing by Api::V1::ReviewsController#destroy as */*
+  Parameters: {"program_id"=>"1", "id"=>"2"}
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-15 10:58:18 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 2.0ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/api/v1/programs/1/reviews/1" for 127.0.0.1 at 2017-12-15 10:58:27 -0500
+Processing by Api::V1::ReviewsController#destroy as */*
+  Parameters: {"program_id"=>"1", "id"=>"1"}
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-15 10:58:27 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-15 11:05:31 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-15 11:05:32 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+Completed 200 OK in 48ms (Views: 0.9ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-15 11:05:37 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 94ms (Views: 70.6ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-15 11:05:41 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eaHmMpNa8KIO1oPD+dzgyqBJ0wU1c5a+iPuyAZ6FTc/XrCW0zRyM62+2MWtFwIIZV6vr9fw5UkPzr/OojM4FNA==", "user"=>{"email"=>"cbea@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "cbea@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 1.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eaHmMpNa8KIO1oPD+dzgyqBJ0wU1c5a+iPuyAZ6FTc/XrCW0zRyM62+2MWtFwIIZV6vr9fw5UkPzr/OojM4FNA==", "user"=>{"email"=>"cbea@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 194ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-15 11:05:56 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"adTBVD4bnrUS2fT14uZijfP+LjvOcU7fX9/4MD+68yTH2QLSYF3i/HO5Rl1e+gBeBBwWywc7iiIki7mZLfG73w==", "user"=>{"email"=>"cbea@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "cbea@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"adTBVD4bnrUS2fT14uZijfP+LjvOcU7fX9/4MD+68yTH2QLSYF3i/HO5Rl1e+gBeBBwWywc7iiIki7mZLfG73w==", "user"=>{"email"=>"cbea@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 212ms (Views: 83.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-12-15 11:06:06 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 101ms (Views: 99.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-15 11:06:28 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ev4OA9+gxJ/7hAUnUUqPHRqPSK0HLDkohuayVxQThNHU882Fgea41prkt4/tVu3O7W1wXc5m/dX9svP+BljMKg==", "user"=>{"first_name"=>"christina", "last_name"=>"bee", "user_name"=>"bee", "email"=>"bee@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bee@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bee@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "christina"], ["last_name", "bee"], ["user_name", "bee"], ["email", "bee@gmail.com"], ["encrypted_password", "$2a$11$G/CbWvN3H8C12EY69TulkO7U4kV/d.hBdFkodBQ4c3RZC8Wv6YlK."]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5 WHERE "users"."id" = $6[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-12-15 16:06:28.663860"], ["last_sign_in_at", "2017-12-15 16:06:28.663860"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 136ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:06:28 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:06:29 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:06:32 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = NULL)[0m
+Completed 200 OK in 45ms (Views: 4.4ms | ActiveRecord: 13.7ms)
+
+
+Started DELETE "/api/v1/programs/2/reviews/5" for 127.0.0.1 at 2017-12-15 11:06:36 -0500
+Processing by Api::V1::ReviewsController#destroy as */*
+  Parameters: {"program_id"=>"2", "id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Filter chain halted as :authorize_user rendered or redirected
+Completed 403 Forbidden in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 11:07:07 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 84.7ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:07:09 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (1.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = NULL)[0m
+Completed 200 OK in 125ms (Views: 7.7ms | ActiveRecord: 30.9ms)
+
+
+Started DELETE "/api/v1/programs/2/reviews/5" for 127.0.0.1 at 2017-12-15 11:07:19 -0500
+Processing by Api::V1::ReviewsController#destroy as */*
+  Parameters: {"program_id"=>"2", "id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Filter chain halted as :authorize_user rendered or redirected
+Completed 403 Forbidden in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-12-15 11:07:26 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UIOf7Ruy2yrhftvnZ3wMA7zqSo6fTbZN0sXQkw4cjrn+jlxrRfSnY4AeaU/bYG7QSwhyflYHcrCpkZE6HFfGQg=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:07:26 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:07:26 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-15 11:12:49 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+Completed 200 OK in 44ms (Views: 0.9ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:12:55 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:12:56 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:13:04 -0500
+Processing by Api::V1::ProgramsController#create as */*
+  Parameters: {"title"=>"The Crown", "year"=>"2016–", "rated"=>"TV-MA", "run_time"=>"52 min", "genre"=>"Drama, History", "actor"=>"Claire Foy, Matt Smith, Victoria Hamilton, Vanessa Kirby", "plot"=>"Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.", "award"=>"Won 2 Golden Globes. Another 16 wins & 42 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxOTA2Mjc3MF5BMl5BanBnXkFtZTgwMTMxMzIxNDM@._V1_SX300.jpg", "imdb_rating"=>"8.7", "imdb_id"=>"tt4786824", "total_seasons"=>2, "user_id"=>1, "program"=>{"title"=>"The Crown", "year"=>"2016–", "rated"=>"TV-MA", "run_time"=>"52 min", "genre"=>"Drama, History", "actor"=>"Claire Foy, Matt Smith, Victoria Hamilton, Vanessa Kirby", "plot"=>"Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.", "award"=>"Won 2 Golden Globes. Another 16 wins & 42 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxOTA2Mjc3MF5BMl5BanBnXkFtZTgwMTMxMzIxNDM@._V1_SX300.jpg", "imdb_rating"=>"8.7", "imdb_id"=>"tt4786824", "total_seasons"=>2, "user_id"=>1}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-15 11:13:17 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 111ms (Views: 79.9ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-15 11:13:21 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hrTX/Nxq5drzvn9SJAxx3A4w0tHiyWTk+AOzRyngcLn298N7Dc44m4WmpuYrHTAnLhrpXYCVShSjVwoFR9Uo6w==", "user"=>{"email"=>"bee@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "bee@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2 WHERE "users"."id" = $3[0m  [["current_sign_in_at", "2017-12-15 16:13:21.148109"], ["sign_in_count", 2], ["id", 5]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 149ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:13:21 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:13:21 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:13:26 -0500
+Processing by Api::V1::ProgramsController#create as */*
+  Parameters: {"title"=>"The Crown", "year"=>"2016–", "rated"=>"TV-MA", "run_time"=>"52 min", "genre"=>"Drama, History", "actor"=>"Claire Foy, Matt Smith, Victoria Hamilton, Vanessa Kirby", "plot"=>"Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.", "award"=>"Won 2 Golden Globes. Another 16 wins & 42 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxOTA2Mjc3MF5BMl5BanBnXkFtZTgwMTMxMzIxNDM@._V1_SX300.jpg", "imdb_rating"=>"8.7", "imdb_id"=>"tt4786824", "total_seasons"=>2, "user_id"=>1, "program"=>{"title"=>"The Crown", "year"=>"2016–", "rated"=>"TV-MA", "run_time"=>"52 min", "genre"=>"Drama, History", "actor"=>"Claire Foy, Matt Smith, Victoria Hamilton, Vanessa Kirby", "plot"=>"Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.", "award"=>"Won 2 Golden Globes. Another 16 wins & 42 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxOTA2Mjc3MF5BMl5BanBnXkFtZTgwMTMxMzIxNDM@._V1_SX300.jpg", "imdb_rating"=>"8.7", "imdb_id"=>"tt4786824", "total_seasons"=>2, "user_id"=>1}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "The Crown"], ["year", "2016–"], ["rated", "TV-MA"], ["run_time", "52 min"], ["genre", "Drama, History"], ["actor", "Claire Foy, Matt Smith, Victoria Hamilton, Vanessa Kirby"], ["plot", "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century."], ["award", "Won 2 Golden Globes. Another 16 wins & 42 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxOTA2Mjc3MF5BMl5BanBnXkFtZTgwMTMxMzIxNDM@._V1_SX300.jpg"], ["imdb_rating", "8.7"], ["imdb_id", "tt4786824"], ["total_seasons", 2], ["user_id", 5], ["created_at", "2017-12-15 16:13:26.756342"], ["updated_at", "2017-12-15 16:13:26.756342"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/programs/10" for 127.0.0.1 at 2017-12-15 11:13:26 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 10]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (1.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = NULL)[0m
+Completed 200 OK in 26ms (Views: 4.2ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:13:49 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:13:49 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:13:59 -0500
+Processing by Api::V1::ProgramsController#create as */*
+  Parameters: {"title"=>"Star Wars: The Last Jedi", "year"=>"2017", "rated"=>"N/A", "run_time"=>"150 min", "genre"=>"Action, Adventure, Fantasy", "actor"=>"Daisy Ridley, Tom Hardy, Billie Lourd, Andy Serkis", "plot"=>"Having taken her first steps into the larger Jedi world, Rey joins Luke Skywalker on an adventure with Leia, Finn and Poe that unlocks mysteries of the Force and secrets of the past.", "award"=>"1 win & 1 nomination.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_SX300.jpg", "imdb_rating"=>"N/A", "imdb_id"=>"tt2527336", "total_seasons"=>nil, "user_id"=>1, "program"=>{"title"=>"Star Wars: The Last Jedi", "year"=>"2017", "rated"=>"N/A", "run_time"=>"150 min", "genre"=>"Action, Adventure, Fantasy", "actor"=>"Daisy Ridley, Tom Hardy, Billie Lourd, Andy Serkis", "plot"=>"Having taken her first steps into the larger Jedi world, Rey joins Luke Skywalker on an adventure with Leia, Finn and Poe that unlocks mysteries of the Force and secrets of the past.", "award"=>"1 win & 1 nomination.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_SX300.jpg", "imdb_rating"=>"N/A", "imdb_id"=>"tt2527336", "total_seasons"=>nil, "user_id"=>1}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:14:30 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 83.2ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:14:30 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 37ms (Views: 24.8ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:14:40 -0500
+Processing by Api::V1::ProgramsController#create as */*
+  Parameters: {"title"=>"Star Wars: The Last Jedi", "year"=>"2017", "rated"=>"N/A", "run_time"=>"150 min", "genre"=>"Action, Adventure, Fantasy", "actor"=>"Daisy Ridley, Tom Hardy, Billie Lourd, Andy Serkis", "plot"=>"Having taken her first steps into the larger Jedi world, Rey joins Luke Skywalker on an adventure with Leia, Finn and Poe that unlocks mysteries of the Force and secrets of the past.", "award"=>"1 win & 1 nomination.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_SX300.jpg", "imdb_rating"=>"N/A", "imdb_id"=>"tt2527336", "total_seasons"=>nil, "user_id"=>1, "program"=>{"title"=>"Star Wars: The Last Jedi", "year"=>"2017", "rated"=>"N/A", "run_time"=>"150 min", "genre"=>"Action, Adventure, Fantasy", "actor"=>"Daisy Ridley, Tom Hardy, Billie Lourd, Andy Serkis", "plot"=>"Having taken her first steps into the larger Jedi world, Rey joins Luke Skywalker on an adventure with Leia, Finn and Poe that unlocks mysteries of the Force and secrets of the past.", "award"=>"1 win & 1 nomination.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_SX300.jpg", "imdb_rating"=>"N/A", "imdb_id"=>"tt2527336", "total_seasons"=>nil, "user_id"=>1}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/programs/new" for 127.0.0.1 at 2017-12-15 11:38:04 -0500
+Processing by ProgramsController#new as HTML
+Completed 406 Not Acceptable in 90ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ProgramsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/programs/new" for 127.0.0.1 at 2017-12-15 11:38:54 -0500
+Processing by ProgramsController#new as HTML
+  Rendering programs/new.html.erb within layouts/application
+  Rendered programs/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 122ms (Views: 110.2ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/programs/new" for 127.0.0.1 at 2017-12-15 11:38:57 -0500
+Processing by ProgramsController#new as HTML
+  Rendering programs/new.html.erb within layouts/application
+  Rendered programs/new.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 69.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-15 11:39:09 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 67.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-15 11:39:10 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (4.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = NULL)[0m
+Completed 200 OK in 86ms (Views: 4.6ms | ActiveRecord: 28.1ms)
+
+
+Started GET "/programs/edit" for 127.0.0.1 at 2017-12-15 11:39:13 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs/edit" for 127.0.0.1 at 2017-12-15 11:39:14 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"edit"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=edit):
+  
+app/controllers/api/v1/programs_controller.rb:14:in `show'
+Started GET "/programs/edit" for 127.0.0.1 at 2017-12-15 11:39:20 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 71.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs/edit" for 127.0.0.1 at 2017-12-15 11:39:20 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"edit"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=edit):
+  
+app/controllers/api/v1/programs_controller.rb:14:in `show'
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:39:27 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:39:27 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:39:42 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = NULL)[0m
+Completed 200 OK in 43ms (Views: 2.4ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/programs/5" for 127.0.0.1 at 2017-12-15 11:39:53 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs/5" for 127.0.0.1 at 2017-12-15 11:39:53 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 5]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = NULL)[0m
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/programs/new" for 127.0.0.1 at 2017-12-15 11:40:40 -0500
+Processing by ProgramsController#new as HTML
+  Rendering programs/new.html.erb within layouts/application
+  Rendered programs/new.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/programs/edit" for 127.0.0.1 at 2017-12-15 11:40:49 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/programs/edit" for 127.0.0.1 at 2017-12-15 11:40:49 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"edit"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=edit):
+  
+app/controllers/api/v1/programs_controller.rb:14:in `show'
+Started GET "/programs/1" for 127.0.0.1 at 2017-12-15 11:40:58 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 71.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs/1" for 127.0.0.1 at 2017-12-15 11:40:58 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = NULL)[0m
+Completed 200 OK in 12ms (Views: 3.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-15 11:41:06 -0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:41:06 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:41:06 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-15 11:41:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:41:13 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 65.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:41:13 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.0ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-15 11:42:21 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:42:21 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:42:22 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-12-15 11:42:27 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+LIta062TH6kMmRDXSqkjH0l2ShuKvWrFtnd4YRQX1qvUn3QuEAZks2WeL7gmpHjEN3uJYfOdBQLvg1aD0X0lA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:42:27 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:42:27 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.1ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:42:33 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 2.2ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:42:36 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:42:39 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:42:41 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.8ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:42:41 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:42:41 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:42:41 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:42:41 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:42:41 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:42:55 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:42:56 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs/3" for 127.0.0.1 at 2017-12-15 11:42:58 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 1.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:43:00 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:43:00 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:45:59 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:46:01 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 11:46:03 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 708ms (Views: 706.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:46:04 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 1.5ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:46:05 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 11:47:18 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 792ms (Views: 789.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:47:19 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 1.6ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:47:21 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 11:48:01 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 111.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:48:02 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (1.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 2.2ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:48:03 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 11:48:11 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:48:11 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 2.2ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:48:13 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 11:48:52 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 110.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:48:53 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (2.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:48:54 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 11:49:13 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 104ms (Views: 102.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:49:14 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:49:15 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 11:49:27 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 104ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:49:28 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 1.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:49:29 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 11:49:36 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 112ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:49:37 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.8ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 1.8ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:49:38 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2017-12-15 11:49:46 -0500
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering programs/show.html.erb within layouts/application
+  Rendered programs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 118ms (Views: 115.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs/2" for 127.0.0.1 at 2017-12-15 11:49:47 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 2]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/api/v1/programs/2/reviews" for 127.0.0.1 at 2017-12-15 11:49:49 -0500
+Processing by Api::V1::ReviewsController#create as */*
+  Parameters: {"headline"=>"", "body"=>"", "rating"=>"0", "program_id"=>"2", "review"=>{"program_id"=>"2", "headline"=>"", "body"=>"", "rating"=>"0"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:49:52 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:49:52 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/programs/3" for 127.0.0.1 at 2017-12-15 11:49:55 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-15 11:50:04 -0500
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:50:04 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:50:05 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:50:43 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:50:43 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.8ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-15 11:50:47 -0500
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:50:47 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:50:47 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (1.0ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:51:01 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:51:01 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.9ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-15 11:51:05 -0500
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:51:06 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:51:06 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:52:06 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 117ms (Views: 115.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:52:07 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (4.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-15 11:52:09 -0500
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 11:52:10 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-15 11:52:10 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+

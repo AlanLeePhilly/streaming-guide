@@ -33,6 +33,11 @@ const ReviewTile = props => {
               <i className={downVoteClass} aria-hidden="true"></i>
           </button>
         </div>
+        <div className="button delete-button" >
+          <button onClick={props.deleteReview} type="button">
+           Delete
+          </button>
+        </div>
       </div>
     </div>
   )

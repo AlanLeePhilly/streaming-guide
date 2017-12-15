@@ -1,6 +1,7 @@
 # comment for codeclimate
 class Api::V1::ReviewsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  before_action :authorize_user, only: [:destroy]
 
   def show
     program = Program.find(params[:program_id])
@@ -22,6 +23,12 @@ class Api::V1::ReviewsController < ApplicationController
     else
       render json: { error: @review.errors.full_messages }, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    render json: { message: 'cool' }
   end
 
   private

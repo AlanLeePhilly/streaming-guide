@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
 
   def authorize_user
     if current_user.role != 'admin'
-      render json: { error: ['Unauthorized to delete this program'] }, status: 403
+      render json: { error: ['Unauthorized to delete'] }, status: 403
     end
   end
 end
