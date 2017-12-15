@@ -12,11 +12,11 @@ describe('AddReviewForm', () => {
     );
   });
 
-  it('should render a h2 tag', () => {
-    expect(wrapper.find('h2').length).toEqual(1);
+  it('should render a div tag', () => {
+    expect(wrapper.find('div').length).toEqual(2);
   });
 
-  it('should render an h2 tag with the title property value', () => {
-    expect(wrapper.find('h2').text()).toBe('Add a New Review!');
+  it('should render an h4 tag with the title property value', () => {
+    expect(wrapper.find('h4').text()).toBe('Add a New Review!');
   });
 })

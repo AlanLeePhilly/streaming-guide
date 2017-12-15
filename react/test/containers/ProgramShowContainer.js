@@ -13,12 +13,8 @@ describe('ProgramShowContainer', () => {
     );
   });
 
-  it('should render a h1 tag', () => {
-    expect(wrapper.find('h1').length).toEqual(1);
-  });
-
-  it('should render an h1 tag with the title property value', () => {
-    expect(wrapper.find('h1').text()).toBe('Program Show Container');
+  it('should render a h4 tag', () => {
+    expect(wrapper.find('h4').length).toEqual(2);
   });
 
   it('should render a img tag', () => {
@@ -26,6 +22,6 @@ describe('ProgramShowContainer', () => {
   });
 
   it('should render a p tag', () => {
-    expect(wrapper.find('h1').length).toEqual(1);
+    expect(wrapper.find('p').length).toEqual(2);
   });
 });
