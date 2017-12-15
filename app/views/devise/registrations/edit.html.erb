@@ -14,6 +14,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :favorite_show, "Favorite Show" %><br />
+    <%= f.text_field :favorite_show, autofocus: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>

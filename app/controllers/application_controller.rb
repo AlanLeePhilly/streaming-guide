@@ -21,7 +21,8 @@ class ApplicationController < ActionController::Base
         :user_name,
         :avatar,
         :avatar_cache,
-        :remove_avatar
+        :remove_avatar,
+        :favorite_show
         ])
   end
 
