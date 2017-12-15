@@ -40,8 +40,8 @@ class ReviewFormContainer extends Component {
   }
 
   render() {
-    let errors = this.state.errors.map(error => {
-      return( <li>{error}</li> )
+    let errors = this.state.errors.map((error, i) => {
+      return( <p className='errors' key={i}>{error}</p> )
     })
 
     return(

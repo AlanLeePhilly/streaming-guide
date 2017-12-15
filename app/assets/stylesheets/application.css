@@ -70,7 +70,16 @@ body {
  strong {
    color: #269CC4;
  }
+.errors {
+  color: red;
+  font-weight: bold;
+  margin: 0px 20px;
+}
 
+.flash-alert {
+  margin-left: 15px;
+  font-size: 125%;
+}
  .show-poster {
 
  }
