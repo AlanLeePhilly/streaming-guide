@@ -15346,3 +15346,304 @@ Processing by Api::V1::ProgramsController#index as */*
 Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-14 22:43:28 -0500
+  [1m[35m (10.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (14.4ms)
+Started GET "/" for 127.0.0.1 at 2017-12-14 22:43:55 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 47401ms (Views: 47339.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 21362ms (Views: 21356.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 22:44:24 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (90.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 1080ms (Views: 584.3ms | ActiveRecord: 399.0ms)
+
+
+Started POST "/api/v1/programs" for 127.0.0.1 at 2017-12-14 22:44:37 -0500
+Processing by Api::V1::ProgramsController#create as */*
+  Parameters: {"title"=>"Rick and Morty", "year"=>"2013–", "rated"=>"TV-14", "run_time"=>"23 min", "genre"=>"Animation, Adventure, Comedy", "actor"=>"Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland", "plot"=>"An animated series that follows the exploits of a super scientist and his not-so-bright grandson.", "award"=>"4 wins & 7 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg", "imdb_rating"=>"9.3", "imdb_id"=>"tt2861424", "total_seasons"=>3, "user_id"=>1, "program"=>{"title"=>"Rick and Morty", "year"=>"2013–", "rated"=>"TV-14", "run_time"=>"23 min", "genre"=>"Animation, Adventure, Comedy", "actor"=>"Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland", "plot"=>"An animated series that follows the exploits of a super scientist and his not-so-bright grandson.", "award"=>"4 wins & 7 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg", "imdb_rating"=>"9.3", "imdb_id"=>"tt2861424", "total_seasons"=>3, "user_id"=>1}}
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (15.2ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Rick and Morty"], ["year", "2013–"], ["rated", "TV-14"], ["run_time", "23 min"], ["genre", "Animation, Adventure, Comedy"], ["actor", "Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland"], ["plot", "An animated series that follows the exploits of a super scientist and his not-so-bright grandson."], ["award", "4 wins & 7 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg"], ["imdb_rating", "9.3"], ["imdb_id", "tt2861424"], ["total_seasons", 3], ["user_id", 1], ["created_at", "2017-12-15 03:44:37.712415"], ["updated_at", "2017-12-15 03:44:37.712415"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 371ms (Views: 2.8ms | ActiveRecord: 124.2ms)
+
+
+Started GET "/api/v1/programs/undefined" for 127.0.0.1 at 2017-12-14 22:44:37 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mProgram Load (12.2ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 17ms (ActiveRecord: 12.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=undefined):
+  
+app/controllers/api/v1/programs_controller.rb:14:in `show'
+Started GET "/programs/new" for 127.0.0.1 at 2017-12-14 22:45:55 -0500
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for ProgramsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-12-14 22:46:07 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 3683ms (Views: 3676.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 22:46:18 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (3.1ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 432ms (Views: 407.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 22:47:44 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 426ms (Views: 417.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 22:47:50 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (54.8ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 541ms (Views: 280.1ms | ActiveRecord: 140.6ms)
+
+
+Started POST "/api/v1/programs" for 127.0.0.1 at 2017-12-14 22:48:08 -0500
+Processing by Api::V1::ProgramsController#create as */*
+  Parameters: {"title"=>"Rick and Morty", "year"=>"2013–", "rated"=>"TV-14", "run_time"=>"23 min", "genre"=>"Animation, Adventure, Comedy", "actor"=>"Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland", "plot"=>"An animated series that follows the exploits of a super scientist and his not-so-bright grandson.", "award"=>"4 wins & 7 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg", "imdb_rating"=>"9.3", "imdb_id"=>"tt2861424", "total_seasons"=>3, "user_id"=>1, "program"=>{"title"=>"Rick and Morty", "year"=>"2013–", "rated"=>"TV-14", "run_time"=>"23 min", "genre"=>"Animation, Adventure, Comedy", "actor"=>"Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland", "plot"=>"An animated series that follows the exploits of a super scientist and his not-so-bright grandson.", "award"=>"4 wins & 7 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg", "imdb_rating"=>"9.3", "imdb_id"=>"tt2861424", "total_seasons"=>3, "user_id"=>1}}
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (23.3ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Rick and Morty"], ["year", "2013–"], ["rated", "TV-14"], ["run_time", "23 min"], ["genre", "Animation, Adventure, Comedy"], ["actor", "Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland"], ["plot", "An animated series that follows the exploits of a super scientist and his not-so-bright grandson."], ["award", "4 wins & 7 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg"], ["imdb_rating", "9.3"], ["imdb_id", "tt2861424"], ["total_seasons", 3], ["user_id", 1], ["created_at", "2017-12-15 03:48:08.319642"], ["updated_at", "2017-12-15 03:48:08.319642"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (1.0ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 295ms (Views: 3.9ms | ActiveRecord: 50.9ms)
+
+
+Started GET "/api/v1/programs/undefined" for 127.0.0.1 at 2017-12-14 22:52:23 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 101ms (ActiveRecord: 17.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=undefined):
+  
+app/controllers/api/v1/programs_controller.rb:14:in `show'
+Started GET "/" for 127.0.0.1 at 2017-12-14 22:52:27 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 1759ms (Views: 1756.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 22:52:32 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (5.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 88ms (Views: 76.2ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/api/v1/programs" for 127.0.0.1 at 2017-12-14 22:52:50 -0500
+Processing by Api::V1::ProgramsController#create as */*
+  Parameters: {"title"=>"Rick and Morty", "year"=>"2013–", "rated"=>"TV-14", "run_time"=>"23 min", "genre"=>"Animation, Adventure, Comedy", "actor"=>"Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland", "plot"=>"An animated series that follows the exploits of a super scientist and his not-so-bright grandson.", "award"=>"4 wins & 7 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg", "imdb_rating"=>"9.3", "imdb_id"=>"tt2861424", "total_seasons"=>3, "user_id"=>1, "program"=>{"title"=>"Rick and Morty", "year"=>"2013–", "rated"=>"TV-14", "run_time"=>"23 min", "genre"=>"Animation, Adventure, Comedy", "actor"=>"Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland", "plot"=>"An animated series that follows the exploits of a super scientist and his not-so-bright grandson.", "award"=>"4 wins & 7 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg", "imdb_rating"=>"9.3", "imdb_id"=>"tt2861424", "total_seasons"=>3, "user_id"=>1}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Rick and Morty"], ["year", "2013–"], ["rated", "TV-14"], ["run_time", "23 min"], ["genre", "Animation, Adventure, Comedy"], ["actor", "Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland"], ["plot", "An animated series that follows the exploits of a super scientist and his not-so-bright grandson."], ["award", "4 wins & 7 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg"], ["imdb_rating", "9.3"], ["imdb_id", "tt2861424"], ["total_seasons", 3], ["user_id", 1], ["created_at", "2017-12-15 03:52:50.848500"], ["updated_at", "2017-12-15 03:52:50.848500"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.9ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 139ms (Views: 2.5ms | ActiveRecord: 21.5ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/programs_controller.rb:41:in `create'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-14 22:54:27 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (386.3ms)
+Completed 200 OK in 861ms (Views: 809.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-14 22:54:42 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vwowu2aK2/kQ+sk9ThOf0FhMbGQOLV/ONpwfVTACpiOgy1h4uoyHY79uKSimYj8QvFEbvvnEJeJE9WJA4VppsQ==", "user"=>{"email"=>"alanhasmail@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (33.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alanhasmail@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 74ms (ActiveRecord: 33.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vwowu2aK2/kQ+sk9ThOf0FhMbGQOLV/ONpwfVTACpiOgy1h4uoyHY79uKSimYj8QvFEbvvnEJeJE9WJA4VppsQ==", "user"=>{"email"=>"alanhasmail@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 460ms (Views: 212.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-14 22:54:52 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"20JBAjZLSXbJlT2As6xeRAIH4xbJnsdJC0jqsk1lmlwsgynB6k0V7GYB3ZVb3f6E5hqUzD53vWV5IZennD1Vzg==", "user"=>{"email"=>"alanhasmail@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "alanhasmail@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 1.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"20JBAjZLSXbJlT2As6xeRAIH4xbJnsdJC0jqsk1lmlwsgynB6k0V7GYB3ZVb3f6E5hqUzD53vWV5IZennD1Vzg==", "user"=>{"email"=>"alanhasmail@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 337ms (Views: 134.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-12-14 22:55:00 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 260ms (Views: 235.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-14 22:55:16 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LmVOhkK3fobGlb7XxlRwQjU38b1BDhCgjW2eHPA4+VnZpCZFnrEiHGkBXsIuJdCC0SqGZ7bnaoz/BOMJIWA2yw==", "user"=>{"first_name"=>"Alan", "last_name"=>"Lee", "user_name"=>"aaaaa", "email"=>"alanhasmail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alanhasmail@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alanhasmail@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Alan"], ["last_name", "Lee"], ["user_name", "aaaaa"], ["email", "alanhasmail@gmail.com"], ["encrypted_password", "$2a$11$f/L59Uvhhk/W51gWKVgAk.28HfWuJz9VbUHzvu9u2DSStPladImdG"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.1ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5 WHERE "users"."id" = $6[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-12-15 03:55:16.893097"], ["last_sign_in_at", "2017-12-15 03:55:16.893097"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["id", 5]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 471ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 22:55:16 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 311ms (Views: 306.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 22:55:20 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (2.1ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/api/v1/programs" for 127.0.0.1 at 2017-12-14 22:55:31 -0500
+Processing by Api::V1::ProgramsController#create as */*
+  Parameters: {"title"=>"Rick and Morty", "year"=>"2013–", "rated"=>"TV-14", "run_time"=>"23 min", "genre"=>"Animation, Adventure, Comedy", "actor"=>"Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland", "plot"=>"An animated series that follows the exploits of a super scientist and his not-so-bright grandson.", "award"=>"4 wins & 7 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg", "imdb_rating"=>"9.3", "imdb_id"=>"tt2861424", "total_seasons"=>3, "user_id"=>1, "program"=>{"title"=>"Rick and Morty", "year"=>"2013–", "rated"=>"TV-14", "run_time"=>"23 min", "genre"=>"Animation, Adventure, Comedy", "actor"=>"Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland", "plot"=>"An animated series that follows the exploits of a super scientist and his not-so-bright grandson.", "award"=>"4 wins & 7 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg", "imdb_rating"=>"9.3", "imdb_id"=>"tt2861424", "total_seasons"=>3, "user_id"=>1}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Rick and Morty"], ["year", "2013–"], ["rated", "TV-14"], ["run_time", "23 min"], ["genre", "Animation, Adventure, Comedy"], ["actor", "Chris Parnell, Spencer Grammer, Sarah Chalke, Justin Roiland"], ["plot", "An animated series that follows the exploits of a super scientist and his not-so-bright grandson."], ["award", "4 wins & 7 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMjRiNDRhNGUtMzRkZi00MThlLTg0ZDMtNjc5YzFjYmFjMmM4XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg"], ["imdb_rating", "9.3"], ["imdb_id", "tt2861424"], ["total_seasons", 3], ["user_id", 5], ["created_at", "2017-12-15 03:55:31.832444"], ["updated_at", "2017-12-15 03:55:31.832444"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.9ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 6.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/v1/programs/13" for 127.0.0.1 at 2017-12-14 22:55:31 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mReview Load (32.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 13]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (2.7ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = NULL)[0m
+Completed 200 OK in 461ms (Views: 28.3ms | ActiveRecord: 54.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-14 22:56:07 -0500
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 564ms (Views: 550.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/programs" for 127.0.0.1 at 2017-12-14 22:56:14 -0500
+Processing by Api::V1::ProgramsController#index as */*
+  [1m[36mProgram Load (4.2ms)[0m  [1m[34mSELECT "programs".* FROM "programs"[0m
+Completed 200 OK in 103ms (Views: 92.4ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/api/v1/programs" for 127.0.0.1 at 2017-12-14 22:57:03 -0500
+Processing by Api::V1::ProgramsController#create as */*
+  Parameters: {"title"=>"Dexter", "year"=>"2006–2013", "rated"=>"TV-MA", "run_time"=>"53 min", "genre"=>"Crime, Drama, Mystery", "actor"=>"Michael C. Hall, Jennifer Carpenter, David Zayas, James Remar", "plot"=>"By day, mild-mannered Dexter is a blood-spatter analyst for the Miami police. But at night, he is a serial killer who only targets other murderers.", "award"=>"Won 2 Golden Globes. Another 49 wins & 191 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMTM5MjkwMTI0MV5BMl5BanBnXkFtZTcwODQwMTc0OQ@@._V1_SX300.jpg", "imdb_rating"=>"8.7", "imdb_id"=>"tt0773262", "total_seasons"=>8, "user_id"=>1, "program"=>{"title"=>"Dexter", "year"=>"2006–2013", "rated"=>"TV-MA", "run_time"=>"53 min", "genre"=>"Crime, Drama, Mystery", "actor"=>"Michael C. Hall, Jennifer Carpenter, David Zayas, James Remar", "plot"=>"By day, mild-mannered Dexter is a blood-spatter analyst for the Miami police. But at night, he is a serial killer who only targets other murderers.", "award"=>"Won 2 Golden Globes. Another 49 wins & 191 nominations.", "poster_url"=>"https://images-na.ssl-images-amazon.com/images/M/MV5BMTM5MjkwMTI0MV5BMl5BanBnXkFtZTcwODQwMTc0OQ@@._V1_SX300.jpg", "imdb_rating"=>"8.7", "imdb_id"=>"tt0773262", "total_seasons"=>8, "user_id"=>1}}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "programs" ("title", "year", "rated", "run_time", "genre", "actor", "plot", "award", "poster_url", "imdb_rating", "imdb_id", "total_seasons", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["title", "Dexter"], ["year", "2006–2013"], ["rated", "TV-MA"], ["run_time", "53 min"], ["genre", "Crime, Drama, Mystery"], ["actor", "Michael C. Hall, Jennifer Carpenter, David Zayas, James Remar"], ["plot", "By day, mild-mannered Dexter is a blood-spatter analyst for the Miami police. But at night, he is a serial killer who only targets other murderers."], ["award", "Won 2 Golden Globes. Another 49 wins & 191 nominations."], ["poster_url", "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM5MjkwMTI0MV5BMl5BanBnXkFtZTcwODQwMTc0OQ@@._V1_SX300.jpg"], ["imdb_rating", "8.7"], ["imdb_id", "tt0773262"], ["total_seasons", 8], ["user_id", 5], ["created_at", "2017-12-15 03:57:03.780761"], ["updated_at", "2017-12-15 03:57:03.780761"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProgram Load (0.9ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+Completed 200 OK in 114ms (Views: 9.8ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/api/v1/programs/14" for 127.0.0.1 at 2017-12-14 22:57:03 -0500
+Processing by Api::V1::ProgramsController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mProgram Load (1.9ms)[0m  [1m[34mSELECT  "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mReview Load (1.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."program_id" = $1 ORDER BY "reviews"."created_at" ASC[0m  [["program_id", 14]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVote Load (1.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE (user_id = 5 AND program_id = NULL)[0m
+Completed 200 OK in 474ms (Views: 23.7ms | ActiveRecord: 6.0ms)
+
+
