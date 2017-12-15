@@ -35,10 +35,10 @@ class Api::V1::ProgramsController < ApplicationController
       @user = current_user
       @program.user = @user
     else
-      render json: { error: ['You must be logged in to do that!'] }
+      return render json: { error: ['You must be logged in to do that!'] }
     end
     if @program.save
-      render json: { program: Program.find(@program.id) }
+      return render json: { program: Program.find(@program.id) }
     else
       render json: { error: @program.errors.full_messages }, status: :unprocessable_entity
     end
